@@ -8,6 +8,7 @@
   justify-items: center;
   justify-content: flex-start;
   align-items: center;
+  background: var(--token-_SJKE-afz);
   min-width: 0;
   min-height: 0;
   grid-template-columns:
@@ -609,6 +610,21 @@
   height: auto;
   max-width: 100%;
   min-width: 0;
+}
+.button2:global(.__wab_instance) {
+  max-width: 100%;
+}
+.svg__zu7Uz {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
+}
+.svg__y3Xdq {
+  position: relative;
+  object-fit: cover;
+  width: 1em;
+  height: 1em;
 }
 .section {
   background: rgba(255, 255, 255, 1);

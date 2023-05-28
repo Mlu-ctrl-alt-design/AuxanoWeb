@@ -1,5 +1,5 @@
 .footer {
-  background: rgba(247, 249, 251, 1);
+  background: var(--token-_SJKE-afz);
   height: auto;
   display: flex;
   flex-direction: column;

@@ -26,6 +26,7 @@ import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/reg
 import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponent
 import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponentHelper
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
+import Button2 from "../../Button2"; // plasmic-import: puKm7ksVLVR/component
 import Footer from "../../Footer"; // plasmic-import: 6NjpMkUH8g-/component
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -410,6 +411,13 @@ function PlasmicContact__RenderFunc(props) {
                       );
                     }
                   }}
+                  submitSlot={
+                    <Button2
+                      data-plasmic-name={"button2"}
+                      data-plasmic-override={overrides.button2}
+                      className={classNames("__wab_instance", sty.button2)}
+                    />
+                  }
                   wrapperCol={{ span: 16, horizontalOnly: true }}
                 >
                   {true ? (
@@ -869,6 +877,7 @@ const PlasmicDescendants = {
     "input2",
     "textArea",
     "button",
+    "button2",
     "section",
     "upper2",
     "addresses",
@@ -903,6 +912,7 @@ const PlasmicDescendants = {
     "input2",
     "textArea",
     "button",
+    "button2",
     "section",
     "upper2",
     "addresses",
@@ -929,7 +939,8 @@ const PlasmicDescendants = {
     "input3",
     "input2",
     "textArea",
-    "button"
+    "button",
+    "button2"
   ],
 
   frame2399: ["frame2399", "upper", "phone", "secondPhone", "mail"],
@@ -944,7 +955,8 @@ const PlasmicDescendants = {
     "input3",
     "input2",
     "textArea",
-    "button"
+    "button",
+    "button2"
   ],
 
   freeBox: ["freeBox", "input", "input3"],
@@ -953,6 +965,7 @@ const PlasmicDescendants = {
   input2: ["input2"],
   textArea: ["textArea"],
   button: ["button"],
+  button2: ["button2"],
   section: [
     "section",
     "upper2",
@@ -1042,6 +1055,7 @@ export const PlasmicContact = Object.assign(
     input2: makeNodeComponent("input2"),
     textArea: makeNodeComponent("textArea"),
     button: makeNodeComponent("button"),
+    button2: makeNodeComponent("button2"),
     section: makeNodeComponent("section"),
     upper2: makeNodeComponent("upper2"),
     addresses: makeNodeComponent("addresses"),
