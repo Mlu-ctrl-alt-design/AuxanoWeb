@@ -216,11 +216,64 @@ function PlasmicAbout__RenderFunc(props) {
                       }
                     </div>
                     <p.Stack
-                      as={"div"}
+                      as={"button"}
                       data-plasmic-name={"button"}
                       data-plasmic-override={overrides.button}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.button)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.button,
+                        sty.button
+                      )}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["goToContact"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: __wrapUserFunction(
+                                  {
+                                    type: "InteractionArgLoc",
+                                    actionName: "navigation",
+                                    interactionUuid: "yumynlUny",
+                                    componentUuid: "RdHlrJ1IAu",
+                                    argName: "destination"
+                                  },
+                                  () => `/contact`
+                                )
+                              };
+                              return __wrapUserFunction(
+                                {
+                                  type: "InteractionLoc",
+                                  actionName: "navigation",
+                                  interactionUuid: "yumynlUny",
+                                  componentUuid: "RdHlrJ1IAu"
+                                },
+                                () =>
+                                  (({ destination }) => {
+                                    __nextRouter?.push(destination);
+                                  })?.apply(null, [actionArgs]),
+                                actionArgs
+                              );
+                            })()
+                          : undefined;
+                        if (
+                          typeof $steps["goToContact"] === "object" &&
+                          typeof $steps["goToContact"].then === "function"
+                        ) {
+                          $steps["goToContact"] = await __wrapUserPromise(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "navigation",
+                              interactionUuid: "yumynlUny",
+                              componentUuid: "RdHlrJ1IAu"
+                            },
+                            $steps["goToContact"]
+                          );
+                        }
+                      }}
+                      ref={ref => {
+                        $refs["button"] = ref;
+                      }}
                     >
                       <div
                         className={classNames(
@@ -245,84 +298,96 @@ function PlasmicAbout__RenderFunc(props) {
                     <div
                       className={classNames(projectcss.all, sty.column__iJah2)}
                     >
-                      <div
-                        data-plasmic-name={"imageGallery"}
-                        data-plasmic-override={overrides.imageGallery}
-                        className={classNames(projectcss.all, sty.imageGallery)}
-                      >
-                        {(
-                          hasVariant(globalVariants, "screen", "mobileOnly")
-                            ? true
-                            : true
-                        ) ? (
-                          <p.Stack
-                            as={"div"}
-                            data-plasmic-name={"frame32"}
-                            data-plasmic-override={overrides.frame32}
-                            hasGap={true}
-                            className={classNames(projectcss.all, sty.frame32)}
-                          >
-                            <div
-                              data-plasmic-name={"rectangle5"}
-                              data-plasmic-override={overrides.rectangle5}
+                      {(
+                        hasVariant(globalVariants, "screen", "tabletOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <div
+                          data-plasmic-name={"imageGallery"}
+                          data-plasmic-override={overrides.imageGallery}
+                          className={classNames(
+                            projectcss.all,
+                            sty.imageGallery
+                          )}
+                        >
+                          {(
+                            hasVariant(globalVariants, "screen", "mobileOnly")
+                              ? true
+                              : true
+                          ) ? (
+                            <p.Stack
+                              as={"div"}
+                              data-plasmic-name={"frame32"}
+                              data-plasmic-override={overrides.frame32}
+                              hasGap={true}
                               className={classNames(
                                 projectcss.all,
-                                sty.rectangle5
+                                sty.frame32
+                              )}
+                            >
+                              <div
+                                data-plasmic-name={"rectangle5"}
+                                data-plasmic-override={overrides.rectangle5}
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.rectangle5
+                                )}
+                              />
+                            </p.Stack>
+                          ) : null}
+                          <p.Stack
+                            as={"div"}
+                            data-plasmic-name={"frame34"}
+                            data-plasmic-override={overrides.frame34}
+                            hasGap={true}
+                            className={classNames(projectcss.all, sty.frame34)}
+                          >
+                            <div
+                              data-plasmic-name={"rectangle4"}
+                              data-plasmic-override={overrides.rectangle4}
+                              className={classNames(
+                                projectcss.all,
+                                sty.rectangle4
+                              )}
+                            />
+
+                            <div
+                              data-plasmic-name={"rectangle6"}
+                              data-plasmic-override={overrides.rectangle6}
+                              className={classNames(
+                                projectcss.all,
+                                sty.rectangle6
                               )}
                             />
                           </p.Stack>
-                        ) : null}
-                        <p.Stack
-                          as={"div"}
-                          data-plasmic-name={"frame34"}
-                          data-plasmic-override={overrides.frame34}
-                          hasGap={true}
-                          className={classNames(projectcss.all, sty.frame34)}
-                        >
-                          <div
-                            data-plasmic-name={"rectangle4"}
-                            data-plasmic-override={overrides.rectangle4}
-                            className={classNames(
-                              projectcss.all,
-                              sty.rectangle4
-                            )}
-                          />
+                          <p.Stack
+                            as={"div"}
+                            data-plasmic-name={"frame33"}
+                            data-plasmic-override={overrides.frame33}
+                            hasGap={true}
+                            className={classNames(projectcss.all, sty.frame33)}
+                          >
+                            <div
+                              data-plasmic-name={"rectangle7"}
+                              data-plasmic-override={overrides.rectangle7}
+                              className={classNames(
+                                projectcss.all,
+                                sty.rectangle7
+                              )}
+                            />
 
-                          <div
-                            data-plasmic-name={"rectangle6"}
-                            data-plasmic-override={overrides.rectangle6}
-                            className={classNames(
-                              projectcss.all,
-                              sty.rectangle6
-                            )}
-                          />
-                        </p.Stack>
-                        <p.Stack
-                          as={"div"}
-                          data-plasmic-name={"frame33"}
-                          data-plasmic-override={overrides.frame33}
-                          hasGap={true}
-                          className={classNames(projectcss.all, sty.frame33)}
-                        >
-                          <div
-                            data-plasmic-name={"rectangle7"}
-                            data-plasmic-override={overrides.rectangle7}
-                            className={classNames(
-                              projectcss.all,
-                              sty.rectangle7
-                            )}
-                          />
-
-                          <div
-                            data-plasmic-name={"rectangle8"}
-                            data-plasmic-override={overrides.rectangle8}
-                            className={classNames(
-                              projectcss.all,
-                              sty.rectangle8
-                            )}
-                          />
-                        </p.Stack>
-                      </div>
+                            <div
+                              data-plasmic-name={"rectangle8"}
+                              data-plasmic-override={overrides.rectangle8}
+                              className={classNames(
+                                projectcss.all,
+                                sty.rectangle8
+                              )}
+                            />
+                          </p.Stack>
+                        </div>
+                      ) : null}
                     </div>
                   ) : null}
                 </div>
@@ -366,11 +431,64 @@ function PlasmicAbout__RenderFunc(props) {
                       }
                     </div>
                     <p.Stack
-                      as={"div"}
+                      as={"button"}
                       data-plasmic-name={"button2"}
                       data-plasmic-override={overrides.button2}
                       hasGap={true}
-                      className={classNames(projectcss.all, sty.button2)}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.button,
+                        sty.button2
+                      )}
+                      onClick={async event => {
+                        const $steps = {};
+                        $steps["goToContact"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: __wrapUserFunction(
+                                  {
+                                    type: "InteractionArgLoc",
+                                    actionName: "navigation",
+                                    interactionUuid: "S58T7t7Lc",
+                                    componentUuid: "RdHlrJ1IAu",
+                                    argName: "destination"
+                                  },
+                                  () => `/contact`
+                                )
+                              };
+                              return __wrapUserFunction(
+                                {
+                                  type: "InteractionLoc",
+                                  actionName: "navigation",
+                                  interactionUuid: "S58T7t7Lc",
+                                  componentUuid: "RdHlrJ1IAu"
+                                },
+                                () =>
+                                  (({ destination }) => {
+                                    __nextRouter?.push(destination);
+                                  })?.apply(null, [actionArgs]),
+                                actionArgs
+                              );
+                            })()
+                          : undefined;
+                        if (
+                          typeof $steps["goToContact"] === "object" &&
+                          typeof $steps["goToContact"].then === "function"
+                        ) {
+                          $steps["goToContact"] = await __wrapUserPromise(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "navigation",
+                              interactionUuid: "S58T7t7Lc",
+                              componentUuid: "RdHlrJ1IAu"
+                            },
+                            $steps["goToContact"]
+                          );
+                        }
+                      }}
+                      ref={ref => {
+                        $refs["button2"] = ref;
+                      }}
                     >
                       <div
                         data-plasmic-name={"text2"}

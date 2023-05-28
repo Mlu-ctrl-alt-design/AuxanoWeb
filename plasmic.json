@@ -536,6 +536,20 @@
           "cssFilePath": "plasmic/auxano/PlasmicSlider.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "Vimgk9fhCxL",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "oGQcGtbFzYohLFbpGrRxL3",
+          "renderModuleFilePath": "plasmic/auxano/PlasmicTextInput.jsx",
+          "importSpec": {
+            "modulePath": "TextInput.jsx"
+          },
+          "cssFilePath": "plasmic/auxano/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "text-input"
         }
       ],
       "icons": [
@@ -693,6 +707,11 @@
           "id": "lBDlZ1FMhR",
           "name": "Line11Icon",
           "moduleFilePath": "plasmic/auxano/icons/PlasmicIcon__Line11.jsx"
+        },
+        {
+          "id": "JxqYggj-4N5",
+          "name": "SearchsvgIcon",
+          "moduleFilePath": "plasmic/auxano/icons/PlasmicIcon__Searchsvg.jsx"
         }
       ],
       "images": [

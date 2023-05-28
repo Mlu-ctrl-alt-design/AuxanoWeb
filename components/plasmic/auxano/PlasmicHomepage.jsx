@@ -941,7 +941,9 @@ function PlasmicHomepage__RenderFunc(props) {
                   >
                     <ph.DataCtxReader>
                       {$ctx => (
-                        <div
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
                           className={classNames(
                             projectcss.all,
                             sty.freeBox__bL0AS
@@ -969,7 +971,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             )}
                             field={"memberTitle"}
                           />
-                        </div>
+                        </p.Stack>
                       )}
                     </ph.DataCtxReader>
                   </CmsQueryRepeater>

@@ -19,20 +19,13 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import TextInput from "../../TextInput"; // plasmic-import: Vimgk9fhCxL/component
+import Button2 from "../../Button2"; // plasmic-import: puKm7ksVLVR/component
 import { useScreenVariants as useScreenVariantsbmXrKiwboivdw } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: bmXrKIWBOIVDW/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_auxano.module.css"; // plasmic-import: oGQcGtbFzYohLFbpGrRxL3/projectcss
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: 6NjpMkUH8g-/css
-import IconOutlineatSymbolIcon from "./icons/PlasmicIcon__IconOutlineatSymbol"; // plasmic-import: kpU_nZgOJW/icon
-import IconOutlinearrowRightIcon from "./icons/PlasmicIcon__IconOutlinearrowRight"; // plasmic-import: -XIeFpLboO/icon
-import VectorIcon from "./icons/PlasmicIcon__Vector"; // plasmic-import: ARaGWbusD/icon
-import Vector2Icon from "./icons/PlasmicIcon__Vector2"; // plasmic-import: 54fgFiIVv2/icon
-import Vector3Icon from "./icons/PlasmicIcon__Vector3"; // plasmic-import: FvtAmqf4DD/icon
-import Vector4Icon from "./icons/PlasmicIcon__Vector4"; // plasmic-import: Af8W2fKOCs/icon
-import Vector5Icon from "./icons/PlasmicIcon__Vector5"; // plasmic-import: vTWh1pCPXu/icon
-import Vector6Icon from "./icons/PlasmicIcon__Vector6"; // plasmic-import: m2ezYW9JIc/icon
-import Vector7Icon from "./icons/PlasmicIcon__Vector7"; // plasmic-import: PqQwYULlsQ/icon
 
 export const PlasmicFooter__VariantProps = new Array();
 
@@ -67,6 +60,19 @@ function PlasmicFooter__RenderFunc(props) {
   const $refs = refsRef.current;
   const currentUser = p.useCurrentUser?.() || {};
   const [$queries, setDollarQueries] = React.useState({});
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "textInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      }
+    ],
+
+    [$props, $ctx]
+  );
+  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbmXrKiwboivdw()
   });
@@ -97,287 +103,95 @@ function PlasmicFooter__RenderFunc(props) {
       >
         <p.Stack
           as={"div"}
-          data-plasmic-name={"frame4"}
-          data-plasmic-override={overrides.frame4}
-          hasGap={true}
-          className={classNames(projectcss.all, sty.frame4)}
-        >
-          <p.Stack
-            as={"div"}
-            data-plasmic-name={"frame14"}
-            data-plasmic-override={overrides.frame14}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.frame14)}
-          >
-            <div
-              data-plasmic-name={"cta"}
-              data-plasmic-override={overrides.cta}
-              className={classNames(projectcss.all, sty.cta)}
-            >
-              <p.Stack
-                as={"div"}
-                data-plasmic-name={"content"}
-                data-plasmic-override={overrides.content}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.content)}
-              >
-                <p.Stack
-                  as={"div"}
-                  data-plasmic-name={"frame13"}
-                  data-plasmic-override={overrides.frame13}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.frame13)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__eewQe
-                    )}
-                  >
-                    {hasVariant(globalVariants, "screen", "tabletOnly")
-                      ? "Subscribe to our newsletter"
-                      : "Subscribe to our newsletter"}
-                  </div>
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"form"}
-                    data-plasmic-override={overrides.form}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.form)}
-                  >
-                    <p.Stack
-                      as={"div"}
-                      data-plasmic-name={"inputTextStyle3"}
-                      data-plasmic-override={overrides.inputTextStyle3}
-                      hasGap={true}
-                      className={classNames(
-                        projectcss.all,
-                        sty.inputTextStyle3
-                      )}
-                    >
-                      {false ? (
-                        <div
-                          data-plasmic-name={"inputLabel2"}
-                          data-plasmic-override={overrides.inputLabel2}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.inputLabel2
-                          )}
-                        >
-                          {"Email"}
-                        </div>
-                      ) : null}
-                      <p.Stack
-                        as={"div"}
-                        data-plasmic-name={"frame5"}
-                        data-plasmic-override={overrides.frame5}
-                        hasGap={true}
-                        className={classNames(projectcss.all, sty.frame5)}
-                      >
-                        {false ? (
-                          <p.Stack
-                            as={"div"}
-                            data-plasmic-name={"icon2"}
-                            data-plasmic-override={overrides.icon2}
-                            hasGap={true}
-                            className={classNames(projectcss.all, sty.icon2)}
-                          >
-                            <IconOutlineatSymbolIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__ov4XQ
-                              )}
-                              role={"img"}
-                            />
-                          </p.Stack>
-                        ) : null}
-                        <div
-                          data-plasmic-name={"enterEmailToGetStarted2"}
-                          data-plasmic-override={
-                            overrides.enterEmailToGetStarted2
-                          }
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.enterEmailToGetStarted2
-                          )}
-                        >
-                          {"Email address"}
-                        </div>
-                      </p.Stack>
-                    </p.Stack>
-                    <p.Stack
-                      as={"div"}
-                      data-plasmic-name={"buttonPrimaryWithIcon"}
-                      data-plasmic-override={overrides.buttonPrimaryWithIcon}
-                      hasGap={true}
-                      className={classNames(
-                        projectcss.all,
-                        sty.buttonPrimaryWithIcon
-                      )}
-                    >
-                      <p.Stack
-                        as={"div"}
-                        data-plasmic-name={"frame1"}
-                        data-plasmic-override={overrides.frame1}
-                        hasGap={true}
-                        className={classNames(projectcss.all, sty.frame1)}
-                      >
-                        <div
-                          data-plasmic-name={"buttonName"}
-                          data-plasmic-override={overrides.buttonName}
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.buttonName
-                          )}
-                        >
-                          {"Subscribe Now"}
-                        </div>
-                        {false ? (
-                          <p.Stack
-                            as={"div"}
-                            data-plasmic-name={"icon3"}
-                            data-plasmic-override={overrides.icon3}
-                            hasGap={true}
-                            className={classNames(projectcss.all, sty.icon3)}
-                          >
-                            <IconOutlinearrowRightIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__crXkq
-                              )}
-                              role={"img"}
-                            />
-                          </p.Stack>
-                        ) : null}
-                      </p.Stack>
-                    </p.Stack>
-                  </p.Stack>
-                </p.Stack>
-              </p.Stack>
-            </div>
-          </p.Stack>
-        </p.Stack>
-        <p.Stack
-          as={"div"}
           data-plasmic-name={"logo"}
           data-plasmic-override={overrides.logo}
           hasGap={true}
           className={classNames(projectcss.all, sty.logo)}
         >
+          {true ? (
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__fLGdQ)}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__c443Z)}
+                displayHeight={"198px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"220px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/auxano/images/gradient3Xpng.png",
+                  fullWidth: 221,
+                  fullHeight: 142,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__bxWy1
+                )}
+              >
+                {hasVariant(globalVariants, "screen", "tabletOnly")
+                  ? "We’ve mastered ABC's of business rescue, corporate restructure, and turnaround strategy; Let us help you."
+                  : "We’ve mastered the ABC's of business rescue, corporate restructure, and turnaround strategy; Let us help you."}
+              </div>
+            </p.Stack>
+          ) : null}
           <p.Stack
             as={"div"}
-            data-plasmic-name={"logo21"}
-            data-plasmic-override={overrides.logo21}
+            data-plasmic-name={"frame13"}
+            data-plasmic-override={overrides.frame13}
             hasGap={true}
-            className={classNames(projectcss.all, sty.logo21)}
+            className={classNames(projectcss.all, sty.frame13)}
           >
             <div
-              data-plasmic-name={"layer2"}
-              data-plasmic-override={overrides.layer2}
-              className={classNames(projectcss.all, sty.layer2)}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__eewQe
+              )}
             >
-              <div
-                data-plasmic-name={"layer1"}
-                data-plasmic-override={overrides.layer1}
-                className={classNames(projectcss.all, sty.layer1)}
-              >
-                <VectorIcon
-                  className={classNames(projectcss.all, sty.svg__fqnwO)}
-                  role={"img"}
-                />
-
-                <Vector2Icon
-                  className={classNames(projectcss.all, sty.svg__vSiFl)}
-                  role={"img"}
-                />
-
-                <Vector3Icon
-                  className={classNames(projectcss.all, sty.svg__pxmoe)}
-                  role={"img"}
-                />
-
-                <Vector4Icon
-                  className={classNames(projectcss.all, sty.svg__htB0V)}
-                  role={"img"}
-                />
-
-                <Vector5Icon
-                  className={classNames(projectcss.all, sty.svg__gUxuM)}
-                  role={"img"}
-                />
-
-                <Vector6Icon
-                  className={classNames(projectcss.all, sty.svg__lhoP)}
-                  role={"img"}
-                />
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__db1ZX
-                  )}
-                >
-                  {"BUSINESS CONSULTING"}
-                </div>
-                <Vector7Icon
-                  className={classNames(projectcss.all, sty.svg__nvpy)}
-                  role={"img"}
-                />
-
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__tYgd3)}
-                  displayHeight={"45px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"38px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/auxano/images/vector10.svg",
-                    fullWidth: 38,
-                    fullHeight: 45,
-                    aspectRatio: 0.844444
-                  }}
-                />
-
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___00DdR)}
-                  displayHeight={"67px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"42px"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/auxano/images/vector11.svg",
-                    fullWidth: 42,
-                    fullHeight: 67,
-                    aspectRatio: 0.626866
-                  }}
-                />
-              </div>
+              {hasVariant(globalVariants, "screen", "tabletOnly")
+                ? "Subscribe to our newsletter"
+                : "Subscribe to our newsletter"}
             </div>
+            <p.Stack
+              as={"div"}
+              data-plasmic-name={"form"}
+              data-plasmic-override={overrides.form}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.form)}
+            >
+              <TextInput
+                data-plasmic-name={"textInput"}
+                data-plasmic-override={overrides.textInput}
+                className={classNames("__wab_instance", sty.textInput)}
+                onChange={(...eventArgs) => {
+                  p.generateStateOnChangeProp($state, ["textInput", "value"])(
+                    (e => e.target?.value).apply(null, eventArgs)
+                  );
+                }}
+                value={
+                  p.generateStateValueProp($state, ["textInput", "value"]) ?? ""
+                }
+              />
+            </p.Stack>
+            <Button2
+              data-plasmic-name={"button2"}
+              data-plasmic-override={overrides.button2}
+              className={classNames("__wab_instance", sty.button2)}
+            >
+              {"Sign up to newsletter"}
+            </Button2>
           </p.Stack>
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__bxWy1
-            )}
-          >
-            {hasVariant(globalVariants, "screen", "tabletOnly")
-              ? "We’ve mastered ABC's of business rescue, corporate restructure, and turnaround strategy; Let us help you."
-              : "We’ve mastered ABC's of business rescue, corporate restructure, and turnaround strategy; Let us help you."}
-          </div>
         </p.Stack>
         <p.Stack
           as={"div"}
@@ -825,25 +639,11 @@ const PlasmicDescendants = {
   footer: [
     "footer",
     "frame15",
-    "frame4",
-    "frame14",
-    "cta",
-    "content",
+    "logo",
     "frame13",
     "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3",
-    "logo",
-    "logo21",
-    "layer2",
-    "layer1",
+    "textInput",
+    "button2",
     "frame12",
     "frame6",
     "widgwts",
@@ -889,25 +689,11 @@ const PlasmicDescendants = {
 
   frame15: [
     "frame15",
-    "frame4",
-    "frame14",
-    "cta",
-    "content",
+    "logo",
     "frame13",
     "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3",
-    "logo",
-    "logo21",
-    "layer2",
-    "layer1",
+    "textInput",
+    "button2",
     "frame12",
     "frame6",
     "widgwts",
@@ -951,125 +737,11 @@ const PlasmicDescendants = {
     "copyright"
   ],
 
-  frame4: [
-    "frame4",
-    "frame14",
-    "cta",
-    "content",
-    "frame13",
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  frame14: [
-    "frame14",
-    "cta",
-    "content",
-    "frame13",
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  cta: [
-    "cta",
-    "content",
-    "frame13",
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  content: [
-    "content",
-    "frame13",
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  frame13: [
-    "frame13",
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  form: [
-    "form",
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  inputTextStyle3: [
-    "inputTextStyle3",
-    "inputLabel2",
-    "frame5",
-    "icon2",
-    "enterEmailToGetStarted2"
-  ],
-
-  inputLabel2: ["inputLabel2"],
-  frame5: ["frame5", "icon2", "enterEmailToGetStarted2"],
-  icon2: ["icon2"],
-  enterEmailToGetStarted2: ["enterEmailToGetStarted2"],
-  buttonPrimaryWithIcon: [
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "buttonName",
-    "icon3"
-  ],
-
-  frame1: ["frame1", "buttonName", "icon3"],
-  buttonName: ["buttonName"],
-  icon3: ["icon3"],
-  logo: ["logo", "logo21", "layer2", "layer1"],
-  logo21: ["logo21", "layer2", "layer1"],
-  layer2: ["layer2", "layer1"],
-  layer1: ["layer1"],
+  logo: ["logo", "frame13", "form", "textInput", "button2"],
+  frame13: ["frame13", "form", "textInput", "button2"],
+  form: ["form", "textInput"],
+  textInput: ["textInput"],
+  button2: ["button2"],
   frame12: [
     "frame12",
     "frame6",
@@ -1351,25 +1023,11 @@ export const PlasmicFooter = Object.assign(
   {
     // Helper components rendering sub-elements
     frame15: makeNodeComponent("frame15"),
-    frame4: makeNodeComponent("frame4"),
-    frame14: makeNodeComponent("frame14"),
-    cta: makeNodeComponent("cta"),
-    content: makeNodeComponent("content"),
+    logo: makeNodeComponent("logo"),
     frame13: makeNodeComponent("frame13"),
     form: makeNodeComponent("form"),
-    inputTextStyle3: makeNodeComponent("inputTextStyle3"),
-    inputLabel2: makeNodeComponent("inputLabel2"),
-    frame5: makeNodeComponent("frame5"),
-    icon2: makeNodeComponent("icon2"),
-    enterEmailToGetStarted2: makeNodeComponent("enterEmailToGetStarted2"),
-    buttonPrimaryWithIcon: makeNodeComponent("buttonPrimaryWithIcon"),
-    frame1: makeNodeComponent("frame1"),
-    buttonName: makeNodeComponent("buttonName"),
-    icon3: makeNodeComponent("icon3"),
-    logo: makeNodeComponent("logo"),
-    logo21: makeNodeComponent("logo21"),
-    layer2: makeNodeComponent("layer2"),
-    layer1: makeNodeComponent("layer1"),
+    textInput: makeNodeComponent("textInput"),
+    button2: makeNodeComponent("button2"),
     frame12: makeNodeComponent("frame12"),
     frame6: makeNodeComponent("frame6"),
     widgwts: makeNodeComponent("widgwts"),
