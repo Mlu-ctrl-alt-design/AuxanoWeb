@@ -1,0 +1,953 @@
+.root {
+  display: grid;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-content: flex-start;
+  justify-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns:
+    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+}
+:where(.root > *) {
+  grid-column: 4;
+}
+.header {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-template-columns:
+    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+  padding: 8px 0;
+}
+:where(.header > *) {
+  grid-column: 4;
+}
+.navBarFinal:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.frame26 {
+  background: linear-gradient(
+        112.83deg,
+        rgba(70, 84, 104, 1) 22.81%,
+        rgba(0, 0, 0, 0) 77.85%
+      )
+      0% 0% / 100% 100% no-repeat,
+    url("/plasmic/auxano/images/frame26.jpg") center center / cover no-repeat;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 127px 134px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame26 {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 24px 32px;
+  }
+}
+.header2 {
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.header2 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 64px);
+  height: calc(100% + 64px);
+}
+.header2 > :global(.__wab_flex-container) > *,
+.header2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.header2 > :global(.__wab_flex-container) > picture > img,
+.header2
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 64px;
+}
+.content {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+}
+.content > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 24px);
+  height: calc(100% + 24px);
+}
+.content > :global(.__wab_flex-container) > *,
+.content > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.content > :global(.__wab_flex-container) > picture > img,
+.content
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 24px;
+}
+.frame39 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  border-radius: 12px;
+  padding: 10px;
+}
+.frame39 > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.frame39 > :global(.__wab_flex-container) > *,
+.frame39 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame39 > :global(.__wab_flex-container) > picture > img,
+.frame39
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.text__nQ4Vb {
+  display: block;
+  font-size: 14px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+.text__cDI {
+  display: block;
+  font-size: 36px;
+  font-family: "Syne", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 40px;
+  align-self: stretch;
+  position: relative;
+  color: var(--token-_SJKE-afz);
+}
+.body {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-template-columns:
+    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+  padding: 8px 0;
+}
+:where(.body > *) {
+  grid-column: 4;
+}
+.columns {
+  --plsmc-rc-col-gap: 0px;
+}
+.columns {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  align-items: stretch;
+  flex-shrink: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 8px;
+}
+.columns > :nth-child(2n + 1) {
+  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+}
+.columns > :nth-child(2n + 2) {
+  width: calc((100% - 2 * var(--plsmc-rc-col-gap, 0px)) * 6 / 12);
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns > :nth-child(1n + 1) {
+    width: calc((100% - 1 * var(--plsmc-rc-col-gap, 0px)) * 12 / 12);
+  }
+}
+.column__e1IW {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.frame2399 {
+  background: linear-gradient(103deg, #ececec 0%, #ececec73 100%) 0% 0% / 100%
+      100% repeat,
+    rgba(222, 222, 222, 1);
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 32px;
+}
+.frame2399 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.frame2399 > :global(.__wab_flex-container) > *,
+.frame2399 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.frame2399 > :global(.__wab_flex-container) > picture > img,
+.frame2399
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame2399 {
+    padding: 16px;
+  }
+}
+.upper {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+.upper > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.upper > :global(.__wab_flex-container) > *,
+.upper > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.upper > :global(.__wab_flex-container) > picture > img,
+.upper > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 16px;
+}
+.text__guUjB {
+  display: block;
+  font-size: 30px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 36px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.text__vgrrx {
+  display: block;
+  font-size: 18px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+  width: 396px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__vgrrx {
+    width: 100%;
+    min-width: 0;
+  }
+}
+.phone {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 10px;
+}
+.phone > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.phone > :global(.__wab_flex-container) > *,
+.phone > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.phone > :global(.__wab_flex-container) > picture > img,
+.phone > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 10px;
+}
+.svg___374Oe {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #0f172a;
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text___07Yfj {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.secondPhone {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 10px;
+}
+.secondPhone > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.secondPhone > :global(.__wab_flex-container) > *,
+.secondPhone > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.secondPhone > :global(.__wab_flex-container) > picture > img,
+.secondPhone
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 10px;
+}
+.svg__wpC9G {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #0f172a;
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text___0MefW {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.mail {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  padding: 10px;
+}
+.mail > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: calc(0px - 10px);
+  width: calc(100% + 10px);
+}
+.mail > :global(.__wab_flex-container) > *,
+.mail > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.mail > :global(.__wab_flex-container) > picture > img,
+.mail > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-left: 10px;
+}
+.svg___4KgUa {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  color: #0f172a;
+  width: 24px;
+  height: 24px;
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text___5RXnT {
+  display: block;
+  font-size: 18px;
+  text-decoration-line: underline;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.column__v3HaK {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .column__v3HaK {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+.form2:global(.__wab_instance) {
+  display: grid;
+  grid-row-gap: 0px;
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+  align-self: auto;
+  grid-template-columns:
+    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+}
+:where(.form2 > *) {
+  grid-column: 4;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0px;
+}
+.freeBox > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-left: calc(0px - 24px);
+  width: calc(100% + 24px);
+}
+.freeBox > :global(.__wab_flex-container) > *,
+.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox > :global(.__wab_flex-container) > picture > img,
+.freeBox
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 24px;
+}
+.formField__u42Fz:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
+.text__gz3Wa {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.input:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  height: 44px;
+  border-radius: 8px;
+  border-width: 2px;
+}
+.formField__eVvM:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  min-width: 0;
+}
+.text__omNrs {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.input3:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  height: 44px;
+  border-radius: 8px;
+  border-width: 2px;
+}
+.formField___34IgX:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.text__as3Vl {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.input2:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  height: 44px;
+  border-radius: 8px;
+  border-width: 2px;
+}
+.formField__l1Rtp:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.text__l53YS {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.textArea:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  height: 96px;
+  border-radius: 8px;
+  border-width: 2px;
+}
+.button:global(.__wab_instance) {
+  max-width: 50%;
+  object-fit: cover;
+  background: var(--token-kIXZiwkj8);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .button:global(.__wab_instance) {
+    max-width: 100%;
+  }
+}
+.text__cbtQa {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.section {
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  padding: 48px;
+}
+.section > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 24px);
+  height: calc(100% + 24px);
+}
+.section > :global(.__wab_flex-container) > *,
+.section > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.section > :global(.__wab_flex-container) > picture > img,
+.section
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 24px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .section {
+    padding: 56px 16px;
+  }
+}
+.upper2 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+}
+.upper2 > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.upper2 > :global(.__wab_flex-container) > *,
+.upper2 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.upper2 > :global(.__wab_flex-container) > picture > img,
+.upper2
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 16px;
+}
+.text__bz8NH {
+  display: block;
+  font-size: 30px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 36px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.text___09SYs {
+  display: block;
+  font-size: 18px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(95, 95, 95, 1);
+  position: relative;
+}
+.addresses {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  padding: 48px 12px;
+}
+.addresses > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  margin-left: calc(0px - 64px);
+  width: calc(100% + 64px);
+  margin-top: calc(0px - 64px);
+  height: calc(100% + 64px);
+}
+.addresses > :global(.__wab_flex-container) > *,
+.addresses > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.addresses > :global(.__wab_flex-container) > picture > img,
+.addresses
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 64px;
+  margin-top: 64px;
+}
+.nelspruit {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 16px;
+}
+.nelspruit > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.nelspruit > :global(.__wab_flex-container) > *,
+.nelspruit > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.nelspruit > :global(.__wab_flex-container) > picture > img,
+.nelspruit
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 16px;
+}
+.nelspruit2 {
+  position: relative;
+  width: 114px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.text__g3BYs {
+  display: block;
+  font-size: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(25, 26, 27, 1);
+}
+.text__hmGsb {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(158, 158, 158, 1);
+  position: relative;
+}
+.headoffice {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 16px;
+}
+.headoffice > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.headoffice > :global(.__wab_flex-container) > *,
+.headoffice > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.headoffice > :global(.__wab_flex-container) > picture > img,
+.headoffice
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 16px;
+}
+.headOfficeJhb {
+  position: relative;
+  width: 216px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.text__deJRd {
+  display: block;
+  font-size: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(25, 26, 27, 1);
+}
+.text__sb6Tx {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(158, 158, 158, 1);
+  position: relative;
+}
+.polokwane {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 16px;
+}
+.polokwane > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.polokwane > :global(.__wab_flex-container) > *,
+.polokwane > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.polokwane > :global(.__wab_flex-container) > picture > img,
+.polokwane
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 16px;
+}
+.polokwane2 {
+  position: relative;
+  width: 137px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.text___6Io5U {
+  display: block;
+  font-size: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(25, 26, 27, 1);
+}
+.text__s9NYp {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(158, 158, 158, 1);
+  position: relative;
+}
+.pta {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 16px;
+}
+.pta > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - 16px);
+  height: calc(100% + 16px);
+}
+.pta > :global(.__wab_flex-container) > *,
+.pta > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.pta > :global(.__wab_flex-container) > picture > img,
+.pta > :global(.__wab_flex-container) > :global(.__wab_slot) > picture > img {
+  margin-top: 16px;
+}
+.pretoria {
+  position: relative;
+  width: 98px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.text__kBdCm {
+  display: block;
+  font-size: 24px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  line-height: 32px;
+  color: rgba(25, 26, 27, 1);
+}
+.text__bMrpy {
+  display: block;
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 24px;
+  color: rgba(158, 158, 158, 1);
+  position: relative;
+}
+.section__geRga {
+  display: grid;
+  position: relative;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-template-columns:
+    1fr minmax(0, var(--plsmc-wide-chunk)) var(--plsmc-viewport-gap)
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
+  padding: 8px 0;
+}
+:where(.section__geRga > *) {
+  grid-column: 4;
+}
+.footer__nE2:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}

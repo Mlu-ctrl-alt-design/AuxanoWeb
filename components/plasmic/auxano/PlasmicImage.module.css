@@ -1,0 +1,80 @@
+.person {
+  background: linear-gradient(
+        -180deg,
+        var(--token-9ZrR1Kut5qQh) 0%,
+        var(--token-IhGUZWkMP) 99%,
+        rgba(0, 0, 0, 0.33) 147%
+      )
+      0% 0% / 100% 100% no-repeat,
+    url("/plasmic/auxano/images/person.jpg") center center / cover no-repeat content-box
+      padding-box,
+    rgba(255, 255, 255, 1);
+  height: 300px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  min-width: 0;
+  padding: 32px 16px 12px;
+}
+.person > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 0;
+  margin-top: calc(0px - 10px);
+  height: calc(100% + 10px);
+}
+.person > :global(.__wab_flex-container) > *,
+.person > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.person > :global(.__wab_flex-container) > picture > img,
+.person
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 10px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .person {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .person > :global(.__wab_flex-container) {
+    min-width: 0;
+  }
+}
+.frame16 {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text___8WerH {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  line-height: 28px;
+  color: rgba(222, 222, 222, 1);
+  position: relative;
+}
+.text___2BSkO {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 16px;
+  color: rgba(222, 222, 222, 1);
+  position: relative;
+}

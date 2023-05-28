@@ -1,0 +1,38 @@
+.root:global(.__wab_instance) {
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  object-fit: cover;
+  position: relative;
+  min-width: 0;
+}
+.img__doCie {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__doCie > picture > img {
+  object-fit: cover;
+}
+.img__doCie > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+.img__ri9Jy {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__ri9Jy > picture > img {
+  object-fit: cover;
+}
+.img__ri9Jy > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+.img__vogXd {
+  object-fit: cover;
+  max-width: 100%;
+}
+.img__vogXd > picture > img {
+  object-fit: cover;
+}
+.img__vogXd > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}

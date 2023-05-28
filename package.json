@@ -1,0 +1,26 @@
+{
+  "name": "tmp-cpa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@plasmicapp/cli": "^0.1.286",
+    "@plasmicapp/react-web": "^0.2.220",
+    "@plasmicpkgs/antd5": "^0.0.71",
+    "@plasmicpkgs/plasmic-cms": "^0.0.193",
+    "@plasmicpkgs/plasmic-nav": "^0.0.114",
+    "@plasmicpkgs/plasmic-wordpress": "^0.0.65",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
