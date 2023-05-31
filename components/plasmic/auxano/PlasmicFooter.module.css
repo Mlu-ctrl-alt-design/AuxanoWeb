@@ -203,6 +203,17 @@
   margin-left: 12px;
   margin-top: 12px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame13 {
+    width: 100%;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .frame13 > :global(.__wab_flex-container) {
+    min-width: 0;
+  }
+}
 @media (max-width: 375px) {
   .frame13 {
     width: 100%;

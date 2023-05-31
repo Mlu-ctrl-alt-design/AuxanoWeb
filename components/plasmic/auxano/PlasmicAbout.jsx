@@ -156,9 +156,57 @@ function PlasmicAbout__RenderFunc(props) {
                     sty.text__l3YZm
                   )}
                 >
-                  {
+                  {hasVariant(globalVariants, "screen", "tabletOnly") ? (
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <h5
+                          data-plasmic-name={"h5"}
+                          data-plasmic-override={overrides.h5}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.h5,
+                            projectcss.__wab_text,
+                            sty.h5
+                          )}
+                        >
+                          {hasVariant(
+                            globalVariants,
+                            "screen",
+                            "tabletOnly"
+                          ) ? (
+                            <React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#FCFCFC" }}
+                              >
+                                {"Unlocking Business Potential with "}
+                              </span>
+                              <React.Fragment>{"\n"}</React.Fragment>
+                              <span
+                                className={
+                                  "plasmic_default__all plasmic_default__span"
+                                }
+                                style={{ color: "#FCFCFC" }}
+                              >
+                                {
+                                  "Tailored Solutions and the ABC's of Business Rescue"
+                                }
+                              </span>
+                            </React.Fragment>
+                          ) : (
+                            "Unlocking Business Potential with \nTailored Solutions and the ABC's of Business Rescue"
+                          )}
+                        </h5>
+                      }
+
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  ) : (
                     "Unlocking Business Potential with \nTailored Solutions and the ABC's of Business Rescue"
-                  }
+                  )}
                 </div>
               </p.Stack>
             </p.Stack>
@@ -540,6 +588,7 @@ const PlasmicDescendants = {
     "header",
     "content",
     "frame39",
+    "h5",
     "frame27",
     "button",
     "imageGallery",
@@ -561,10 +610,11 @@ const PlasmicDescendants = {
   ],
 
   navBarFinal: ["navBarFinal"],
-  frame26: ["frame26", "header", "content", "frame39"],
-  header: ["header", "content", "frame39"],
-  content: ["content", "frame39"],
+  frame26: ["frame26", "header", "content", "frame39", "h5"],
+  header: ["header", "content", "frame39", "h5"],
+  content: ["content", "frame39", "h5"],
   frame39: ["frame39"],
+  h5: ["h5"],
   frame27: ["frame27"],
   button: ["button"],
   imageGallery: [
@@ -633,6 +683,7 @@ export const PlasmicAbout = Object.assign(
     header: makeNodeComponent("header"),
     content: makeNodeComponent("content"),
     frame39: makeNodeComponent("frame39"),
+    h5: makeNodeComponent("h5"),
     frame27: makeNodeComponent("frame27"),
     button: makeNodeComponent("button"),
     imageGallery: makeNodeComponent("imageGallery"),

@@ -30,7 +30,6 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_auxano.module.css"; // plasmic-import: oGQcGtbFzYohLFbpGrRxL3/projectcss
 import sty from "./PlasmicServices.module.css"; // plasmic-import: F3vIIsFda1/css
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: OY1KSwwKNC/icon
 
 export const PlasmicServices__VariantProps = new Array();
 
@@ -231,19 +230,31 @@ function PlasmicServices__RenderFunc(props) {
                         )}
                       >
                         {true ? (
-                          <div
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
                             className={classNames(
                               projectcss.all,
                               sty.freeBox__kOaXb
                             )}
                           >
-                            <CmsRowField
-                              className={classNames(
-                                "__wab_instance",
-                                sty.cmsEntryField__cJxbW
-                              )}
-                            />
-
+                            {true ? (
+                              <p.Stack
+                                as={"div"}
+                                hasGap={true}
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.freeBox__lXrYd
+                                )}
+                              >
+                                <CmsRowField
+                                  className={classNames(
+                                    "__wab_instance",
+                                    sty.cmsEntryField__cJxbW
+                                  )}
+                                />
+                              </p.Stack>
+                            ) : null}
                             <CmsRowField
                               className={classNames(
                                 "__wab_instance",
@@ -262,7 +273,7 @@ function PlasmicServices__RenderFunc(props) {
                             >
                               {"Get in touch"}
                             </Button2>
-                          </div>
+                          </p.Stack>
                         ) : null}
                         {(
                           hasVariant(globalVariants, "screen", "tabletOnly")
@@ -283,108 +294,6 @@ function PlasmicServices__RenderFunc(props) {
                 )}
               </ph.DataCtxReader>
             </CmsQueryRepeater>
-            {(
-              hasVariant(globalVariants, "screen", "tabletOnly") ? true : true
-            ) ? (
-              <div
-                data-plasmic-name={"columns"}
-                data-plasmic-override={overrides.columns}
-                className={classNames(projectcss.all, sty.columns)}
-              >
-                <div className={classNames(projectcss.all, sty.column__gp29)}>
-                  {(
-                    hasVariant(globalVariants, "screen", "tabletOnly")
-                      ? true
-                      : true
-                  ) ? (
-                    <p.Stack
-                      as={"div"}
-                      data-plasmic-name={"_1"}
-                      data-plasmic-override={overrides._1}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty._1)}
-                    >
-                      <p.PlasmicImg
-                        data-plasmic-name={"img"}
-                        data-plasmic-override={overrides.img}
-                        alt={""}
-                        className={classNames(sty.img)}
-                        displayHeight={"35px"}
-                        displayMaxHeight={"none"}
-                        displayMaxWidth={"100%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"35px"}
-                        loading={"lazy"}
-                        src={{
-                          src: "/plasmic/auxano/images/icons8Puzzle2.svg",
-                          fullWidth: 35,
-                          fullHeight: 35,
-                          aspectRatio: 1
-                        }}
-                      />
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__xZbmV
-                        )}
-                      >
-                        {"BUSINESS RESCUE AND TURN AROUND STRATEGY"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kzIUn
-                        )}
-                      >
-                        {
-                          "we understand that every business is unique, and we tailor our turnaround strategies to each client's specific needs. Our goal is to help businesses achieve financial stability and long-term success by implementing proven strategies that are customized to their situation."
-                        }
-                      </div>
-                      <p.Stack
-                        as={"div"}
-                        data-plasmic-name={"button"}
-                        data-plasmic-override={overrides.button}
-                        hasGap={true}
-                        className={classNames(projectcss.all, sty.button)}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__rUxni
-                          )}
-                        >
-                          {"Get in touch"}
-                        </div>
-                        <Icon2Icon
-                          data-plasmic-name={"svg"}
-                          data-plasmic-override={overrides.svg}
-                          className={classNames(projectcss.all, sty.svg)}
-                          role={"img"}
-                        />
-                      </p.Stack>
-                    </p.Stack>
-                  ) : null}
-                </div>
-                <div className={classNames(projectcss.all, sty.column__cEwyk)}>
-                  {(
-                    hasVariant(globalVariants, "screen", "tabletOnly")
-                      ? true
-                      : true
-                  ) ? (
-                    <div
-                      data-plasmic-name={"rectangle3"}
-                      data-plasmic-override={overrides.rectangle3}
-                      className={classNames(projectcss.all, sty.rectangle3)}
-                    />
-                  ) : null}
-                </div>
-              </div>
-            ) : null}
           </p.Stack>
           <div className={classNames(projectcss.all, sty.freeBox__cEacE)}>
             <Footer
@@ -411,12 +320,6 @@ const PlasmicDescendants = {
     "frame27",
     "cmsDataFetcher",
     "button2",
-    "columns",
-    "_1",
-    "img",
-    "button",
-    "svg",
-    "rectangle3",
     "footer"
   ],
 
@@ -425,28 +328,10 @@ const PlasmicDescendants = {
   header: ["header", "content", "frame39"],
   content: ["content", "frame39"],
   frame39: ["frame39"],
-  section: [
-    "section",
-    "frame27",
-    "cmsDataFetcher",
-    "button2",
-    "columns",
-    "_1",
-    "img",
-    "button",
-    "svg",
-    "rectangle3"
-  ],
-
+  section: ["section", "frame27", "cmsDataFetcher", "button2"],
   frame27: ["frame27"],
   cmsDataFetcher: ["cmsDataFetcher", "button2"],
   button2: ["button2"],
-  columns: ["columns", "_1", "img", "button", "svg", "rectangle3"],
-  _1: ["_1", "img", "button", "svg"],
-  img: ["img"],
-  button: ["button", "svg"],
-  svg: ["svg"],
-  rectangle3: ["rectangle3"],
   footer: ["footer"]
 };
 
@@ -491,12 +376,6 @@ export const PlasmicServices = Object.assign(
     frame27: makeNodeComponent("frame27"),
     cmsDataFetcher: makeNodeComponent("cmsDataFetcher"),
     button2: makeNodeComponent("button2"),
-    columns: makeNodeComponent("columns"),
-    _1: makeNodeComponent("_1"),
-    img: makeNodeComponent("img"),
-    button: makeNodeComponent("button"),
-    svg: makeNodeComponent("svg"),
-    rectangle3: makeNodeComponent("rectangle3"),
     footer: makeNodeComponent("footer"),
     // Metadata about props expected for PlasmicServices
     internalVariantProps: PlasmicServices__VariantProps,

@@ -14,9 +14,11 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import {
+  hasVariant,
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavBarFinal from "../../NavBarFinal"; // plasmic-import: Ba2YaKrrpo/component
 import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
@@ -26,8 +28,8 @@ import { inputHelpers as AntdInput_Helpers } from "@plasmicpkgs/antd5/skinny/reg
 import { AntdTextArea } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponent
 import { inputHelpers as AntdTextArea_Helpers } from "@plasmicpkgs/antd5/skinny/registerInput"; // plasmic-import: pTzGlMptTxd/codeComponentHelper
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
-import Button2 from "../../Button2"; // plasmic-import: puKm7ksVLVR/component
 import Footer from "../../Footer"; // plasmic-import: 6NjpMkUH8g-/component
+import { useScreenVariants as useScreenVariantsbmXrKiwboivdw } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: bmXrKIWBOIVDW/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "./plasmic_auxano.module.css"; // plasmic-import: oGQcGtbFzYohLFbpGrRxL3/projectcss
@@ -84,13 +86,13 @@ function PlasmicContact__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input3.value",
+        path: "input2.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input2.value",
+        path: "input3.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -106,6 +108,9 @@ function PlasmicContact__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsbmXrKiwboivdw()
+  });
   return (
     <React.Fragment>
       <Head>
@@ -200,9 +205,74 @@ function PlasmicContact__RenderFunc(props) {
                       sty.text__cDI
                     )}
                   >
-                    {
+                    {hasVariant(globalVariants, "screen", "tabletOnly") ? (
+                      <React.Fragment>
+                        <React.Fragment>{""}</React.Fragment>
+                        {
+                          <h5
+                            data-plasmic-name={"h5"}
+                            data-plasmic-override={overrides.h5}
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.h5,
+                              projectcss.__wab_text,
+                              sty.h5
+                            )}
+                          >
+                            {hasVariant(
+                              globalVariants,
+                              "screen",
+                              "mobileOnly"
+                            ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#EFEFEF" }}
+                                >
+                                  {
+                                    "Unlocking Business Potential with Tailored Solutions and the ABC's of Business Rescue"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            ) : hasVariant(
+                                globalVariants,
+                                "screen",
+                                "tabletOnly"
+                              ) ? (
+                              <React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#EFEFEF" }}
+                                >
+                                  {"Unlocking Business Potential with "}
+                                </span>
+                                <React.Fragment>{"\n"}</React.Fragment>
+                                <span
+                                  className={
+                                    "plasmic_default__all plasmic_default__span"
+                                  }
+                                  style={{ color: "#EFEFEF" }}
+                                >
+                                  {
+                                    "Tailored Solutions and the ABC's of Business Rescue"
+                                  }
+                                </span>
+                              </React.Fragment>
+                            ) : (
+                              "Unlocking Business Potential with \nTailored Solutions and the ABC's of Business Rescue"
+                            )}
+                          </h5>
+                        }
+
+                        <React.Fragment>{""}</React.Fragment>
+                      </React.Fragment>
+                    ) : (
                       "Unlocking Business Potential with \nTailored Solutions and the ABC's of Business Rescue"
-                    }
+                    )}
                   </div>
                 </p.Stack>
               </p.Stack>
@@ -322,7 +392,20 @@ function PlasmicContact__RenderFunc(props) {
                   </p.Stack>
                 </p.Stack>
               </div>
-              <div className={classNames(projectcss.all, sty.column__v3HaK)}>
+              <form
+                action={(() => {
+                  try {
+                    return undefined;
+                  } catch (e) {
+                    if (e instanceof TypeError) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                className={classNames(projectcss.all, sty.column__v3HaK)}
+                method={"post"}
+              >
                 <FormWrapper
                   data-plasmic-name={"form2"}
                   data-plasmic-override={overrides.form2}
@@ -411,148 +494,80 @@ function PlasmicContact__RenderFunc(props) {
                       );
                     }
                   }}
-                  submitSlot={
-                    <Button2
-                      data-plasmic-name={"button2"}
-                      data-plasmic-override={overrides.button2}
-                      className={classNames("__wab_instance", sty.button2)}
-                    />
-                  }
+                  onFinishFailed={async data => {
+                    const $steps = {};
+                  }}
+                  submitSlot={null}
                   wrapperCol={{ span: 16, horizontalOnly: true }}
                 >
-                  {true ? (
-                    <p.Stack
-                      as={"div"}
-                      data-plasmic-name={"freeBox"}
-                      data-plasmic-override={overrides.freeBox}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox)}
-                    >
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formField__u42Fz
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gz3Wa
-                            )}
-                          >
-                            {"Name"}
-                          </div>
-                        }
-                        name={"name"}
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames("__wab_instance", sty.input),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["input", "value"],
-                                AntdInput_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "input",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "input.value"
-                              }
-                            ],
-
-                            [],
-                            AntdInput_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdInput
-                              data-plasmic-name={"input"}
-                              data-plasmic-override={overrides.input}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                      <FormItemWrapper
-                        className={classNames(
-                          "__wab_instance",
-                          sty.formField__eVvM
-                        )}
-                        label={
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__omNrs
-                            )}
-                          >
-                            {"Email"}
-                          </div>
-                        }
-                      >
-                        {(() => {
-                          const child$Props = {
-                            className: classNames("__wab_instance", sty.input3),
-                            onChange:
-                              p.generateStateOnChangePropForCodeComponents(
-                                $state,
-                                "value",
-                                ["input3", "value"],
-                                AntdInput_Helpers
-                              ),
-                            value: p.generateStateValueProp($state, [
-                              "input3",
-                              "value"
-                            ])
-                          };
-                          p.initializeCodeComponentStates(
-                            $state,
-                            [
-                              {
-                                name: "value",
-                                plasmicStateName: "input3.value"
-                              }
-                            ],
-
-                            [],
-                            AntdInput_Helpers ?? {},
-                            child$Props
-                          );
-                          return (
-                            <AntdInput
-                              data-plasmic-name={"input3"}
-                              data-plasmic-override={overrides.input3}
-                              {...child$Props}
-                            />
-                          );
-                        })()}
-                      </FormItemWrapper>
-                    </p.Stack>
-                  ) : null}
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField___34IgX
+                      sty.formField__jMp52
                     )}
                     label={
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__as3Vl
+                          sty.text__sMxes
                         )}
                       >
-                        {"How can we help you ?"}
+                        {"Name"}
+                      </div>
+                    }
+                    name={"name"}
+                  >
+                    {(() => {
+                      const child$Props = {
+                        className: classNames("__wab_instance", sty.input),
+                        onChange: p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "value",
+                          ["input", "value"],
+                          AntdInput_Helpers
+                        ),
+                        value: p.generateStateValueProp($state, [
+                          "input",
+                          "value"
+                        ])
+                      };
+                      p.initializeCodeComponentStates(
+                        $state,
+                        [
+                          {
+                            name: "value",
+                            plasmicStateName: "input.value"
+                          }
+                        ],
+
+                        [],
+                        AntdInput_Helpers ?? {},
+                        child$Props
+                      );
+                      return (
+                        <AntdInput
+                          data-plasmic-name={"input"}
+                          data-plasmic-override={overrides.input}
+                          {...child$Props}
+                        />
+                      );
+                    })()}
+                  </FormItemWrapper>
+                  <FormItemWrapper
+                    className={classNames(
+                      "__wab_instance",
+                      sty.formField__fQWg
+                    )}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__i3Tq2
+                        )}
+                      >
+                        {"Email"}
                       </div>
                     }
                   >
@@ -595,14 +610,67 @@ function PlasmicContact__RenderFunc(props) {
                   <FormItemWrapper
                     className={classNames(
                       "__wab_instance",
-                      sty.formField__l1Rtp
+                      sty.formField__v83Q0
                     )}
                     label={
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__l53YS
+                          sty.text__aDrw0
+                        )}
+                      >
+                        {"How can we help you ?"}
+                      </div>
+                    }
+                  >
+                    {(() => {
+                      const child$Props = {
+                        className: classNames("__wab_instance", sty.input3),
+                        onChange: p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "value",
+                          ["input3", "value"],
+                          AntdInput_Helpers
+                        ),
+                        value: p.generateStateValueProp($state, [
+                          "input3",
+                          "value"
+                        ])
+                      };
+                      p.initializeCodeComponentStates(
+                        $state,
+                        [
+                          {
+                            name: "value",
+                            plasmicStateName: "input3.value"
+                          }
+                        ],
+
+                        [],
+                        AntdInput_Helpers ?? {},
+                        child$Props
+                      );
+                      return (
+                        <AntdInput
+                          data-plasmic-name={"input3"}
+                          data-plasmic-override={overrides.input3}
+                          {...child$Props}
+                        />
+                      );
+                    })()}
+                  </FormItemWrapper>
+                  <FormItemWrapper
+                    className={classNames(
+                      "__wab_instance",
+                      sty.formField__lzLdC
+                    )}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__c2ZLl
                         )}
                       >
                         {"Message"}
@@ -659,14 +727,14 @@ function PlasmicContact__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__cbtQa
+                        sty.text__qb97H
                       )}
                     >
                       {"Submit"}
                     </div>
                   </AntdButton>
                 </FormWrapper>
-              </div>
+              </form>
             </div>
             <p.Stack
               as={"div"}
@@ -863,6 +931,7 @@ const PlasmicDescendants = {
     "header2",
     "content",
     "frame39",
+    "h5",
     "body",
     "columns",
     "frame2399",
@@ -871,13 +940,11 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "freeBox",
     "input",
-    "input3",
     "input2",
+    "input3",
     "textArea",
     "button",
-    "button2",
     "section",
     "upper2",
     "addresses",
@@ -891,12 +958,22 @@ const PlasmicDescendants = {
     "pretoria"
   ],
 
-  header: ["header", "navBarFinal", "frame26", "header2", "content", "frame39"],
+  header: [
+    "header",
+    "navBarFinal",
+    "frame26",
+    "header2",
+    "content",
+    "frame39",
+    "h5"
+  ],
+
   navBarFinal: ["navBarFinal"],
-  frame26: ["frame26", "header2", "content", "frame39"],
-  header2: ["header2", "content", "frame39"],
-  content: ["content", "frame39"],
+  frame26: ["frame26", "header2", "content", "frame39", "h5"],
+  header2: ["header2", "content", "frame39", "h5"],
+  content: ["content", "frame39", "h5"],
   frame39: ["frame39"],
+  h5: ["h5"],
   body: [
     "body",
     "columns",
@@ -906,13 +983,11 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "freeBox",
     "input",
-    "input3",
     "input2",
+    "input3",
     "textArea",
     "button",
-    "button2",
     "section",
     "upper2",
     "addresses",
@@ -934,13 +1009,11 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "freeBox",
     "input",
-    "input3",
     "input2",
+    "input3",
     "textArea",
-    "button",
-    "button2"
+    "button"
   ],
 
   frame2399: ["frame2399", "upper", "phone", "secondPhone", "mail"],
@@ -948,24 +1021,12 @@ const PlasmicDescendants = {
   phone: ["phone"],
   secondPhone: ["secondPhone"],
   mail: ["mail"],
-  form2: [
-    "form2",
-    "freeBox",
-    "input",
-    "input3",
-    "input2",
-    "textArea",
-    "button",
-    "button2"
-  ],
-
-  freeBox: ["freeBox", "input", "input3"],
+  form2: ["form2", "input", "input2", "input3", "textArea", "button"],
   input: ["input"],
-  input3: ["input3"],
   input2: ["input2"],
+  input3: ["input3"],
   textArea: ["textArea"],
   button: ["button"],
-  button2: ["button2"],
   section: [
     "section",
     "upper2",
@@ -1041,6 +1102,7 @@ export const PlasmicContact = Object.assign(
     header2: makeNodeComponent("header2"),
     content: makeNodeComponent("content"),
     frame39: makeNodeComponent("frame39"),
+    h5: makeNodeComponent("h5"),
     body: makeNodeComponent("body"),
     columns: makeNodeComponent("columns"),
     frame2399: makeNodeComponent("frame2399"),
@@ -1049,13 +1111,11 @@ export const PlasmicContact = Object.assign(
     secondPhone: makeNodeComponent("secondPhone"),
     mail: makeNodeComponent("mail"),
     form2: makeNodeComponent("form2"),
-    freeBox: makeNodeComponent("freeBox"),
     input: makeNodeComponent("input"),
-    input3: makeNodeComponent("input3"),
     input2: makeNodeComponent("input2"),
+    input3: makeNodeComponent("input3"),
     textArea: makeNodeComponent("textArea"),
     button: makeNodeComponent("button"),
-    button2: makeNodeComponent("button2"),
     section: makeNodeComponent("section"),
     upper2: makeNodeComponent("upper2"),
     addresses: makeNodeComponent("addresses"),

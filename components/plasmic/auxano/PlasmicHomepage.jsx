@@ -1071,50 +1071,29 @@ function PlasmicHomepage__RenderFunc(props) {
                     >
                       <ph.DataCtxReader>
                         {$ctx => (
-                          <React.Fragment>
-                            <div
+                          <p.Stack
+                            as={"div"}
+                            hasGap={true}
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__w3Toh
+                            )}
+                          >
+                            <CmsRowField
                               className={classNames(
-                                projectcss.all,
-                                sty.freeBox__w3Toh
+                                "__wab_instance",
+                                sty.cmsEntryField__aXcsG
                               )}
-                            >
-                              <CmsRowField
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.cmsEntryField__aXcsG
-                                )}
-                              />
+                            />
 
-                              <CmsRowField
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.cmsEntryField__dXnLq
-                                )}
-                                field={"content"}
-                              />
-                            </div>
-                            <div
+                            <CmsRowField
                               className={classNames(
-                                projectcss.all,
-                                sty.freeBox__jfwzj
+                                "__wab_instance",
+                                sty.cmsEntryField__dXnLq
                               )}
-                            >
-                              <CmsRowField
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.cmsEntryField___2R0Ub
-                                )}
-                              />
-
-                              <CmsRowField
-                                className={classNames(
-                                  "__wab_instance",
-                                  sty.cmsEntryField__ehXrA
-                                )}
-                                field={"content"}
-                              />
-                            </div>
-                          </React.Fragment>
+                              field={"content"}
+                            />
+                          </p.Stack>
                         )}
                       </ph.DataCtxReader>
                     </CmsQueryRepeater>

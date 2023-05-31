@@ -126,6 +126,7 @@
 .button2__aoojX:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+  width: auto;
 }
 .svg___4Mlo {
   position: relative;
@@ -1098,6 +1099,7 @@
 .button2__t9Auy:global(.__wab_instance) {
   max-width: 100%;
   position: relative;
+  width: auto;
 }
 .svg__pqUel {
   position: relative;
@@ -1700,12 +1702,29 @@
   width: 100%;
   height: auto;
   max-width: 100%;
-  justify-content: flex-start;
-  align-items: stretch;
+  box-shadow: 0px 4px 16px 0px #00000033;
   min-width: 0;
   border-radius: 8px;
   padding: 16px;
   border: 1px solid var(--token-Pxe4wDL2kJpb);
+}
+.freeBox__w3Toh > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-width: 0;
+  margin-top: calc(0px - var(--token-uyB8FyBfU));
+  height: calc(100% + var(--token-uyB8FyBfU));
+}
+.freeBox__w3Toh > :global(.__wab_flex-container) > *,
+.freeBox__w3Toh > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__w3Toh > :global(.__wab_flex-container) > picture > img,
+.freeBox__w3Toh
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: var(--token-uyB8FyBfU);
 }
 .cmsEntryField__aXcsG:global(.__wab_instance) {
   object-fit: cover;
@@ -1715,35 +1734,6 @@
   font-size: 24px;
 }
 .cmsEntryField__dXnLq:global(.__wab_instance) {
-  object-fit: cover;
-  max-width: 100%;
-}
-.freeBox__jfwzj {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-width: 0;
-  padding: 16px;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .freeBox__jfwzj {
-    border-radius: 8px;
-    border: 1px solid var(--token-Pxe4wDL2kJpb);
-  }
-}
-.cmsEntryField___2R0Ub:global(.__wab_instance) {
-  object-fit: cover;
-  max-width: 100%;
-  font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-.cmsEntryField__ehXrA:global(.__wab_instance) {
   object-fit: cover;
   max-width: 100%;
 }

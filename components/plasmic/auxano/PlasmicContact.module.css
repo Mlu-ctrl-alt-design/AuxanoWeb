@@ -486,109 +486,53 @@
 :where(.form2 > *) {
   grid-column: 4;
 }
-.freeBox {
-  display: flex;
+.formField__jMp52:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.text__sMxes {
   position: relative;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px;
-}
-.freeBox > :global(.__wab_flex-container) {
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: flex-start;
-  min-width: 0;
-  margin-left: calc(0px - 24px);
-  width: calc(100% + 24px);
-}
-.freeBox > :global(.__wab_flex-container) > *,
-.freeBox > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox > :global(.__wab_flex-container) > picture > img,
-.freeBox
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 24px;
-}
-.formField__u42Fz:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  width: 100%;
-  min-width: 0;
-}
-.text__gz3Wa {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
 }
 .input:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
-  height: 44px;
-  border-radius: 8px;
-  border-width: 2px;
 }
-.formField__eVvM:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
+.formField__fQWg:global(.__wab_instance) {
   width: 100%;
+  margin-bottom: 24px;
   min-width: 0;
 }
-.text__omNrs {
+.text__i3Tq2 {
   position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-}
-.input3:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-  height: 44px;
-  border-radius: 8px;
-  border-width: 2px;
-}
-.formField___34IgX:global(.__wab_instance) {
-  max-width: 100%;
-  object-fit: cover;
-}
-.text__as3Vl {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
 }
 .input2:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
-  height: 44px;
-  border-radius: 8px;
-  border-width: 2px;
 }
-.formField__l1Rtp:global(.__wab_instance) {
+.formField__v83Q0:global(.__wab_instance) {
+  width: 100%;
+  margin-bottom: 24px;
+  min-width: 0;
+}
+.text__aDrw0 {
+  position: relative;
+}
+.input3:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
-.text__l53YS {
-  position: relative;
+.formField__lzLdC:global(.__wab_instance) {
   width: 100%;
-  height: auto;
-  max-width: 100%;
+  margin-bottom: 24px;
   min-width: 0;
+}
+.text__c2ZLl {
+  position: relative;
 }
 .textArea:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
-  height: 96px;
-  border-radius: 8px;
-  border-width: 2px;
 }
 .button:global(.__wab_instance) {
   max-width: 50%;
@@ -604,27 +548,12 @@
     max-width: 100%;
   }
 }
-.text__cbtQa {
+.text__qb97H {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
   min-width: 0;
-}
-.button2:global(.__wab_instance) {
-  max-width: 100%;
-}
-.svg__zu7Uz {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
-}
-.svg__y3Xdq {
-  position: relative;
-  object-fit: cover;
-  width: 1em;
-  height: 1em;
 }
 .section {
   background: rgba(255, 255, 255, 1);
