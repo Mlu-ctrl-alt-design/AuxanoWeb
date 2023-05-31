@@ -341,7 +341,7 @@ function PlasmicContact__RenderFunc(props) {
                   ]}
                   labelCol={{ span: 8, horizontalOnly: true }}
                   layout={"vertical"}
-                  mode={"simplified"}
+                  mode={undefined}
                   onFinish={async values => {
                     const $steps = {};
                     $steps["updateForm2Value"] = true
