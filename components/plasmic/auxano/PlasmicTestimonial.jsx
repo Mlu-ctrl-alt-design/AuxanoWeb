@@ -87,7 +87,10 @@ function PlasmicTestimonial__RenderFunc(props) {
           try {
             return $props.title;
           } catch (e) {
-            if (e instanceof TypeError) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
               return "Enter some text";
             }
             throw e;
@@ -108,7 +111,10 @@ function PlasmicTestimonial__RenderFunc(props) {
           try {
             return $props.content;
           } catch (e) {
-            if (e instanceof TypeError) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
               return "Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled with ‘real’ content. This is required when, for example, the final text is not yet available.";
             }
             throw e;

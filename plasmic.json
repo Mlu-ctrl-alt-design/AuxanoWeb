@@ -303,7 +303,8 @@
           "displayName": "plasmic-antd5-date-picker",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerDatePicker"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "kmmGrmCVRJPgZ5NNJMDQ4v",
@@ -913,6 +914,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.287",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.287/dist/plasmic.schema.json"
+  "cliVersion": "0.1.288",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.288/dist/plasmic.schema.json"
 }

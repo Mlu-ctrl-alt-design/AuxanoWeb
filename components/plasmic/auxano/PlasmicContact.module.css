@@ -494,7 +494,7 @@
 .text__sMxes {
   position: relative;
 }
-.input:global(.__wab_instance) {
+.nameField:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -506,7 +506,7 @@
 .text__i3Tq2 {
   position: relative;
 }
-.input2:global(.__wab_instance) {
+.email:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
@@ -518,21 +518,23 @@
 .text__aDrw0 {
   position: relative;
 }
-.input3:global(.__wab_instance) {
+.subject:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
 }
 .formField__lzLdC:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
+  height: 164px;
   min-width: 0;
 }
 .text__c2ZLl {
   position: relative;
 }
-.textArea:global(.__wab_instance) {
+.message:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
+  height: 130px;
 }
 .button:global(.__wab_instance) {
   max-width: 50%;

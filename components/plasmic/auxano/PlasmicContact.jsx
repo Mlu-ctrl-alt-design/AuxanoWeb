@@ -13,6 +13,11 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
+import {
+  usePlasmicDataConfig,
+  executePlasmicDataOp
+} from "@plasmicapp/react-web/lib/data-sources";
 import {
   hasVariant,
   classNames,
@@ -80,25 +85,25 @@ function PlasmicContact__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input.value",
+        path: "nameField.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input2.value",
+        path: "email.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "input3.value",
+        path: "subject.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
-        path: "textArea.value",
+        path: "message.value",
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
@@ -108,6 +113,9 @@ function PlasmicContact__RenderFunc(props) {
     [$props, $ctx]
   );
   const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const dataSourcesCtx = usePlasmicDataSourceContext();
+  const { cache, mutate: swrMutate } = usePlasmicDataConfig();
+  const mutate = swrMutate;
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsbmXrKiwboivdw()
   });
@@ -393,16 +401,7 @@ function PlasmicContact__RenderFunc(props) {
                 </p.Stack>
               </div>
               <form
-                action={(() => {
-                  try {
-                    return undefined;
-                  } catch (e) {
-                    if (e instanceof TypeError) {
-                      return undefined;
-                    }
-                    throw e;
-                  }
-                })()}
+                action={"https://ubaujthjfbsnndrucxxp.supabase.co"}
                 className={classNames(projectcss.all, sty.column__v3HaK)}
                 method={"post"}
               >
@@ -427,75 +426,191 @@ function PlasmicContact__RenderFunc(props) {
                   mode={undefined}
                   onFinish={async values => {
                     const $steps = {};
-                    $steps["updateForm2Value"] = true
+                    $steps["airtableGetList"] = true
                       ? (() => {
                           const actionArgs = {
-                            variable: __wrapUserFunction(
+                            dataOp: __wrapUserFunction(
                               {
                                 type: "InteractionArgLoc",
-                                actionName: "updateVariable",
-                                interactionUuid: "MNVshfA_4",
+                                actionName: "dataSourceOp",
+                                interactionUuid: "Su2zYEEcR",
                                 componentUuid: "m0O9QXIre9",
-                                argName: "variable"
+                                argName: "dataOp"
                               },
                               () => ({
-                                objRoot: $state,
-                                variablePath: ["form2", "value"]
+                                sourceId: "oQuoSGr4isjm332ucSNNpL",
+                                opId: "d75a53d2-11bf-4396-9243-92e3c638a570",
+                                userArgs: {
+                                  variables: [
+                                    $state.nameField.value,
+                                    $state.email.value,
+                                    $state.subject.value,
+                                    $state.message.value
+                                  ]
+                                },
+                                cacheKey: null,
+                                invalidatedKeys: [],
+                                roleId: null
                               })
-                            ),
-                            operation: __wrapUserFunction(
-                              {
-                                type: "InteractionArgLoc",
-                                actionName: "updateVariable",
-                                interactionUuid: "MNVshfA_4",
-                                componentUuid: "m0O9QXIre9",
-                                argName: "operation"
-                              },
-                              () => 0
                             )
                           };
                           return __wrapUserFunction(
                             {
                               type: "InteractionLoc",
-                              actionName: "updateVariable",
-                              interactionUuid: "MNVshfA_4",
+                              actionName: "dataSourceOp",
+                              interactionUuid: "Su2zYEEcR",
                               componentUuid: "m0O9QXIre9"
                             },
                             () =>
-                              (({
-                                variable,
-                                value,
-                                startIndex,
-                                deleteCount
-                              }) => {
-                                if (!variable) {
-                                  return;
+                              (async ({ dataOp, continueOnError }) => {
+                                try {
+                                  const response = await executePlasmicDataOp(
+                                    dataOp,
+                                    {
+                                      userAuthToken:
+                                        dataSourcesCtx?.userAuthToken
+                                    }
+                                  );
+                                  if (
+                                    dataOp.invalidatedKeys &&
+                                    dataOp.invalidatedKeys.find(
+                                      key => key === "plasmic_refresh_all"
+                                    )
+                                  ) {
+                                    await Promise.all(
+                                      Array.from(cache.keys()).map(async key =>
+                                        mutate(key)
+                                      )
+                                    );
+                                    return response;
+                                  }
+                                  if (dataOp.invalidatedKeys) {
+                                    await Promise.all(
+                                      dataOp.invalidatedKeys.map(
+                                        async invalidateKey =>
+                                          Promise.all(
+                                            Array.from(cache.keys()).map(
+                                              async key => {
+                                                if (
+                                                  typeof key === "string" &&
+                                                  key.includes(
+                                                    `.$.${invalidateKey}.$.`
+                                                  )
+                                                ) {
+                                                  return mutate(key);
+                                                }
+                                                return Promise.resolve();
+                                              }
+                                            )
+                                          )
+                                      )
+                                    );
+                                  }
+                                  return response;
+                                } catch (e) {
+                                  if (!continueOnError) {
+                                    throw e;
+                                  }
+                                  return e;
                                 }
-                                const { objRoot, variablePath } = variable;
-                                p.set(objRoot, variablePath, value);
-                                return value;
                               })?.apply(null, [actionArgs]),
                             actionArgs
                           );
                         })()
                       : undefined;
                     if (
-                      typeof $steps["updateForm2Value"] === "object" &&
-                      typeof $steps["updateForm2Value"].then === "function"
+                      typeof $steps["airtableGetList"] === "object" &&
+                      typeof $steps["airtableGetList"].then === "function"
                     ) {
-                      $steps["updateForm2Value"] = await __wrapUserPromise(
+                      $steps["airtableGetList"] = await __wrapUserPromise(
                         {
                           type: "InteractionLoc",
-                          actionName: "updateVariable",
-                          interactionUuid: "MNVshfA_4",
+                          actionName: "dataSourceOp",
+                          interactionUuid: "Su2zYEEcR",
                           componentUuid: "m0O9QXIre9"
                         },
-                        $steps["updateForm2Value"]
+                        $steps["airtableGetList"]
                       );
                     }
                   }}
                   onFinishFailed={async data => {
                     const $steps = {};
+                    $steps["refreshData"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            queryInvalidation: __wrapUserFunction(
+                              {
+                                type: "InteractionArgLoc",
+                                actionName: "invalidateDataQuery",
+                                interactionUuid: "uPSFs3Nup",
+                                componentUuid: "m0O9QXIre9",
+                                argName: "queryInvalidation"
+                              },
+                              () => ["plasmic_refresh_all"]
+                            )
+                          };
+                          return __wrapUserFunction(
+                            {
+                              type: "InteractionLoc",
+                              actionName: "invalidateDataQuery",
+                              interactionUuid: "uPSFs3Nup",
+                              componentUuid: "m0O9QXIre9"
+                            },
+                            () =>
+                              (async ({ queryInvalidation }) => {
+                                if (!queryInvalidation) {
+                                  return;
+                                }
+                                if (
+                                  queryInvalidation.find(
+                                    key => key === "plasmic_refresh_all"
+                                  )
+                                ) {
+                                  await Promise.all(
+                                    Array.from(cache.keys()).map(async key =>
+                                      mutate(key)
+                                    )
+                                  );
+                                  return;
+                                }
+                                await Promise.all(
+                                  queryInvalidation.map(async invalidateKey =>
+                                    Promise.all(
+                                      Array.from(cache.keys()).map(
+                                        async key => {
+                                          if (
+                                            typeof key === "string" &&
+                                            key.includes(
+                                              `.$.${invalidateKey}.$.`
+                                            )
+                                          ) {
+                                            return mutate(key);
+                                          }
+                                          return Promise.resolve();
+                                        }
+                                      )
+                                    )
+                                  )
+                                );
+                              })?.apply(null, [actionArgs]),
+                            actionArgs
+                          );
+                        })()
+                      : undefined;
+                    if (
+                      typeof $steps["refreshData"] === "object" &&
+                      typeof $steps["refreshData"].then === "function"
+                    ) {
+                      $steps["refreshData"] = await __wrapUserPromise(
+                        {
+                          type: "InteractionLoc",
+                          actionName: "invalidateDataQuery",
+                          interactionUuid: "uPSFs3Nup",
+                          componentUuid: "m0O9QXIre9"
+                        },
+                        $steps["refreshData"]
+                      );
+                    }
                   }}
                   submitSlot={null}
                   wrapperCol={{ span: 16, horizontalOnly: true }}
@@ -517,18 +632,25 @@ function PlasmicContact__RenderFunc(props) {
                       </div>
                     }
                     name={"name"}
+                    rules={[
+                      {
+                        ruleType: "required",
+                        message: "This field cannot be empty"
+                      }
+                    ]}
                   >
                     {(() => {
                       const child$Props = {
-                        className: classNames("__wab_instance", sty.input),
+                        className: classNames("__wab_instance", sty.nameField),
                         onChange: p.generateStateOnChangePropForCodeComponents(
                           $state,
                           "value",
-                          ["input", "value"],
+                          ["nameField", "value"],
                           AntdInput_Helpers
                         ),
+                        placeholder: "What is your name?",
                         value: p.generateStateValueProp($state, [
-                          "input",
+                          "nameField",
                           "value"
                         ])
                       };
@@ -537,7 +659,7 @@ function PlasmicContact__RenderFunc(props) {
                         [
                           {
                             name: "value",
-                            plasmicStateName: "input.value"
+                            plasmicStateName: "nameField.value"
                           }
                         ],
 
@@ -547,8 +669,8 @@ function PlasmicContact__RenderFunc(props) {
                       );
                       return (
                         <AntdInput
-                          data-plasmic-name={"input"}
-                          data-plasmic-override={overrides.input}
+                          data-plasmic-name={"nameField"}
+                          data-plasmic-override={overrides.nameField}
                           {...child$Props}
                         />
                       );
@@ -570,18 +692,26 @@ function PlasmicContact__RenderFunc(props) {
                         {"Email"}
                       </div>
                     }
+                    rules={[
+                      {
+                        ruleType: "required",
+                        message: "This field cannot be empty"
+                      }
+                    ]}
                   >
                     {(() => {
                       const child$Props = {
-                        className: classNames("__wab_instance", sty.input2),
+                        className: classNames("__wab_instance", sty.email),
                         onChange: p.generateStateOnChangePropForCodeComponents(
                           $state,
                           "value",
-                          ["input2", "value"],
+                          ["email", "value"],
                           AntdInput_Helpers
                         ),
+                        placeholder: "Enter your email address",
+                        type: "email",
                         value: p.generateStateValueProp($state, [
-                          "input2",
+                          "email",
                           "value"
                         ])
                       };
@@ -590,7 +720,7 @@ function PlasmicContact__RenderFunc(props) {
                         [
                           {
                             name: "value",
-                            plasmicStateName: "input2.value"
+                            plasmicStateName: "email.value"
                           }
                         ],
 
@@ -600,8 +730,8 @@ function PlasmicContact__RenderFunc(props) {
                       );
                       return (
                         <AntdInput
-                          data-plasmic-name={"input2"}
-                          data-plasmic-override={overrides.input2}
+                          data-plasmic-name={"email"}
+                          data-plasmic-override={overrides.email}
                           {...child$Props}
                         />
                       );
@@ -620,21 +750,22 @@ function PlasmicContact__RenderFunc(props) {
                           sty.text__aDrw0
                         )}
                       >
-                        {"How can we help you ?"}
+                        {"Subject"}
                       </div>
                     }
                   >
                     {(() => {
                       const child$Props = {
-                        className: classNames("__wab_instance", sty.input3),
+                        className: classNames("__wab_instance", sty.subject),
                         onChange: p.generateStateOnChangePropForCodeComponents(
                           $state,
                           "value",
-                          ["input3", "value"],
+                          ["subject", "value"],
                           AntdInput_Helpers
                         ),
+                        placeholder: "How can we help you today",
                         value: p.generateStateValueProp($state, [
-                          "input3",
+                          "subject",
                           "value"
                         ])
                       };
@@ -643,7 +774,7 @@ function PlasmicContact__RenderFunc(props) {
                         [
                           {
                             name: "value",
-                            plasmicStateName: "input3.value"
+                            plasmicStateName: "subject.value"
                           }
                         ],
 
@@ -653,8 +784,8 @@ function PlasmicContact__RenderFunc(props) {
                       );
                       return (
                         <AntdInput
-                          data-plasmic-name={"input3"}
-                          data-plasmic-override={overrides.input3}
+                          data-plasmic-name={"subject"}
+                          data-plasmic-override={overrides.subject}
                           {...child$Props}
                         />
                       );
@@ -680,15 +811,17 @@ function PlasmicContact__RenderFunc(props) {
                   >
                     {(() => {
                       const child$Props = {
-                        className: classNames("__wab_instance", sty.textArea),
+                        className: classNames("__wab_instance", sty.message),
                         onChange: p.generateStateOnChangePropForCodeComponents(
                           $state,
                           "value",
-                          ["textArea", "value"],
+                          ["message", "value"],
                           AntdTextArea_Helpers
                         ),
+                        placeholder:
+                          "any additional detail you'd like us to know",
                         value: p.generateStateValueProp($state, [
-                          "textArea",
+                          "message",
                           "value"
                         ])
                       };
@@ -697,7 +830,7 @@ function PlasmicContact__RenderFunc(props) {
                         [
                           {
                             name: "value",
-                            plasmicStateName: "textArea.value"
+                            plasmicStateName: "message.value"
                           }
                         ],
 
@@ -707,8 +840,8 @@ function PlasmicContact__RenderFunc(props) {
                       );
                       return (
                         <AntdTextArea
-                          data-plasmic-name={"textArea"}
-                          data-plasmic-override={overrides.textArea}
+                          data-plasmic-name={"message"}
+                          data-plasmic-override={overrides.message}
                           {...child$Props}
                         />
                       );
@@ -940,10 +1073,10 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "input",
-    "input2",
-    "input3",
-    "textArea",
+    "nameField",
+    "email",
+    "subject",
+    "message",
     "button",
     "section",
     "upper2",
@@ -983,10 +1116,10 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "input",
-    "input2",
-    "input3",
-    "textArea",
+    "nameField",
+    "email",
+    "subject",
+    "message",
     "button",
     "section",
     "upper2",
@@ -1009,10 +1142,10 @@ const PlasmicDescendants = {
     "secondPhone",
     "mail",
     "form2",
-    "input",
-    "input2",
-    "input3",
-    "textArea",
+    "nameField",
+    "email",
+    "subject",
+    "message",
     "button"
   ],
 
@@ -1021,11 +1154,11 @@ const PlasmicDescendants = {
   phone: ["phone"],
   secondPhone: ["secondPhone"],
   mail: ["mail"],
-  form2: ["form2", "input", "input2", "input3", "textArea", "button"],
-  input: ["input"],
-  input2: ["input2"],
-  input3: ["input3"],
-  textArea: ["textArea"],
+  form2: ["form2", "nameField", "email", "subject", "message", "button"],
+  nameField: ["nameField"],
+  email: ["email"],
+  subject: ["subject"],
+  message: ["message"],
   button: ["button"],
   section: [
     "section",
@@ -1111,10 +1244,10 @@ export const PlasmicContact = Object.assign(
     secondPhone: makeNodeComponent("secondPhone"),
     mail: makeNodeComponent("mail"),
     form2: makeNodeComponent("form2"),
-    input: makeNodeComponent("input"),
-    input2: makeNodeComponent("input2"),
-    input3: makeNodeComponent("input3"),
-    textArea: makeNodeComponent("textArea"),
+    nameField: makeNodeComponent("nameField"),
+    email: makeNodeComponent("email"),
+    subject: makeNodeComponent("subject"),
+    message: makeNodeComponent("message"),
     button: makeNodeComponent("button"),
     section: makeNodeComponent("section"),
     upper2: makeNodeComponent("upper2"),

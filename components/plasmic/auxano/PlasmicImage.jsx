@@ -104,7 +104,10 @@ function PlasmicImage__RenderFunc(props) {
             try {
               return $props.name;
             } catch (e) {
-              if (e instanceof TypeError) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
                 return "First Name";
               }
               throw e;
@@ -122,7 +125,10 @@ function PlasmicImage__RenderFunc(props) {
             try {
               return $props.title;
             } catch (e) {
-              if (e instanceof TypeError) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
                 return "Director of something";
               }
               throw e;
