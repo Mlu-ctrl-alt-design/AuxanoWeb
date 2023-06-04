@@ -147,6 +147,7 @@ function PlasmicFormsubmissions__RenderFunc(props) {
 
           {(() => {
             const child$Props = {
+              canSelectRows: "click",
               className: classNames("__wab_instance", sty.table),
               data: (() => {
                 try {

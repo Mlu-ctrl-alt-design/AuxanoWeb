@@ -563,6 +563,19 @@
           "cssFilePath": "plasmic/auxano/PlasmicFormsubmissions.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "QWIxmkximS",
+          "name": "ThankYou",
+          "type": "managed",
+          "projectId": "oGQcGtbFzYohLFbpGrRxL3",
+          "renderModuleFilePath": "plasmic/auxano/PlasmicThankYou.jsx",
+          "importSpec": {
+            "modulePath": "../pages/thank-you.jsx"
+          },
+          "cssFilePath": "plasmic/auxano/PlasmicThankYou.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -951,7 +964,8 @@
           "displayName": "hostless-rich-list",
           "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
