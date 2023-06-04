@@ -401,7 +401,7 @@ function PlasmicContact__RenderFunc(props) {
                 </p.Stack>
               </div>
               <form
-                action={"https://ubaujthjfbsnndrucxxp.supabase.co"}
+                action={"https://api.airtable.com/v0/appFw5XfVRype9bmf/Table%201/APIKEY=pat3XDwpJ9yhMQqjH.f16ca14c39dbc84a09a8d6072bff2873f59b20357396afd50e59224d193408ae"}
                 className={classNames(projectcss.all, sty.column__v3HaK)}
                 method={"post"}
               >
