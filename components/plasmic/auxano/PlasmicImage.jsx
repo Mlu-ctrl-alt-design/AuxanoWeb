@@ -100,19 +100,21 @@ function PlasmicImage__RenderFunc(props) {
             sty.text___8WerH
           )}
         >
-          {(() => {
-            try {
-              return $props.name;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return "First Name";
+          <React.Fragment>
+            {(() => {
+              try {
+                return $props.name;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "First Name";
+                }
+                throw e;
               }
-              throw e;
-            }
-          })()}
+            })()}
+          </React.Fragment>
         </div>
         <div
           className={classNames(
@@ -121,19 +123,21 @@ function PlasmicImage__RenderFunc(props) {
             sty.text___2BSkO
           )}
         >
-          {(() => {
-            try {
-              return $props.title;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return "Director of something";
+          <React.Fragment>
+            {(() => {
+              try {
+                return $props.title;
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "Director of something";
+                }
+                throw e;
               }
-              throw e;
-            }
-          })()}
+            })()}
+          </React.Fragment>
         </div>
       </div>
     </p.Stack>

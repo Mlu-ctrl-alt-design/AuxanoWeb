@@ -92,9 +92,9 @@ function PlasmicNavBarFinal__RenderFunc(props) {
             displayMinWidth={"0"}
             displayWidth={"auto"}
             src={{
-              src: "/plasmic/auxano/images/gradient3Xpng.png",
-              fullWidth: 221,
-              fullHeight: 142,
+              src: "/plasmic/auxano/images/group10883Xpng.png",
+              fullWidth: 406,
+              fullHeight: 191,
               aspectRatio: undefined
             }}
           />

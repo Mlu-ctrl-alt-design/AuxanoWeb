@@ -690,9 +690,11 @@ function PlasmicHomepage__RenderFunc(props) {
             hasGap={true}
             className={classNames(projectcss.all, sty.servicesSection)}
           >
-            <div
+            <p.Stack
+              as={"div"}
               data-plasmic-name={"titleSection"}
               data-plasmic-override={overrides.titleSection}
+              hasGap={true}
               className={classNames(projectcss.all, sty.titleSection)}
             >
               <div
@@ -720,7 +722,7 @@ function PlasmicHomepage__RenderFunc(props) {
                           className={
                             "plasmic_default__all plasmic_default__span"
                           }
-                          style={{ color: "#FCFCFC" }}
+                          style={{ color: "#434343" }}
                         >
                           {"Our Services"}
                         </span>
@@ -736,9 +738,153 @@ function PlasmicHomepage__RenderFunc(props) {
                 link={`/services`}
                 submitsForm={true}
               >
-                {"View all our Services"}
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__sLrQd
+                  )}
+                >
+                  {"View all our Services"}
+                </div>
               </Button2>
-            </div>
+            </p.Stack>
+            <CmsQueryRepeater
+              className={classNames(
+                "__wab_instance",
+                sty.cmsDataFetcher__ry3Yi
+              )}
+              desc={false}
+              emptyMessage={
+                <ph.DataCtxReader>
+                  {$ctx => (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qp5Fl
+                      )}
+                    >
+                      {"No matching published entries found."}
+                    </div>
+                  )}
+                </ph.DataCtxReader>
+              }
+              forceEmptyState={false}
+              forceLoadingState={false}
+              limit={0}
+              loadingMessage={
+                <ph.DataCtxReader>
+                  {$ctx => (
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qNnyM
+                      )}
+                    >
+                      {"Loading..."}
+                    </div>
+                  )}
+                </ph.DataCtxReader>
+              }
+              noAutoRepeat={false}
+              noLayout={false}
+              useDraft={false}
+            >
+              <ph.DataCtxReader>
+                {$ctx => (
+                  <p.Stack
+                    as={"div"}
+                    data-plasmic-name={"serviceCard"}
+                    data-plasmic-override={overrides.serviceCard}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.serviceCard)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___5Pv5Z)}
+                      displayHeight={"56px"}
+                      displayMaxHeight={"none"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={{
+                        src: "/plasmic/auxano/images/group10883Xpng.png",
+                        fullWidth: 406,
+                        fullHeight: 191,
+                        aspectRatio: undefined
+                      }}
+                    />
+
+                    {true ? (
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__bhd6
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__kJD
+                          )}
+                        >
+                          {"IN"}
+                        </div>
+                        <CmsRowField
+                          className={classNames(
+                            "__wab_instance",
+                            sty.cmsEntryField___3Qj
+                          )}
+                        />
+                      </p.Stack>
+                    ) : null}
+                    {true ? (
+                      <CmsRowField
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cmsEntryField__z4MEh
+                        )}
+                        field={"serviceRelatedImage"}
+                      />
+                    ) : null}
+                    {true ? (
+                      <CmsRowField
+                        className={classNames(
+                          "__wab_instance",
+                          sty.cmsEntryField__dPfK
+                        )}
+                        field={"serviceDesc"}
+                      />
+                    ) : null}
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__ehzTz
+                      )}
+                      link={`/contact`}
+                      submitsForm={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___3ZCry
+                        )}
+                      >
+                        {"Get in touch"}
+                      </div>
+                    </Button2>
+                  </p.Stack>
+                )}
+              </ph.DataCtxReader>
+            </CmsQueryRepeater>
             <p.Stack
               as={"div"}
               data-plasmic-name={"columns"}
@@ -752,10 +898,8 @@ function PlasmicHomepage__RenderFunc(props) {
                 className={classNames(projectcss.all, sty.column__uYw0O)}
               >
                 <p.PlasmicImg
-                  data-plasmic-name={"img"}
-                  data-plasmic-override={overrides.img}
                   alt={""}
-                  className={classNames(sty.img)}
+                  className={classNames(sty.img__npMyf)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"25%"}
@@ -796,7 +940,7 @@ function PlasmicHomepage__RenderFunc(props) {
                             className={
                               "plasmic_default__all plasmic_default__span"
                             }
-                            style={{ color: "#FCFCFC" }}
+                            style={{ color: "#484848" }}
                           >
                             {"BUSINESS RESCUE AND TURN AROUND STRATEGY"}
                           </span>
@@ -892,9 +1036,11 @@ function PlasmicHomepage__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.bottom)}
                 >
                   <CmsQueryRepeater
+                    data-plasmic-name={"teamDataFetcher"}
+                    data-plasmic-override={overrides.teamDataFetcher}
                     className={classNames(
                       "__wab_instance",
-                      sty.cmsDataFetcher___51SFb
+                      sty.teamDataFetcher
                     )}
                     desc={false}
                     emptyMessage={
@@ -912,6 +1058,7 @@ function PlasmicHomepage__RenderFunc(props) {
                         )}
                       </ph.DataCtxReader>
                     }
+                    filterField={"memberTitle"}
                     forceEmptyState={false}
                     forceLoadingState={false}
                     limit={0}
@@ -932,6 +1079,7 @@ function PlasmicHomepage__RenderFunc(props) {
                     }
                     noAutoRepeat={false}
                     noLayout={false}
+                    orderBy={"memberTitle"}
                     table={
                       hasVariant(globalVariants, "screen", "mobileOnly")
                         ? "team"
@@ -1198,8 +1346,8 @@ const PlasmicDescendants = {
     "servicesSection",
     "titleSection",
     "h2",
+    "serviceCard",
     "columns",
-    "img",
     "h5",
     "section",
     "teamSection",
@@ -1207,6 +1355,7 @@ const PlasmicDescendants = {
     "top",
     "meetTheTeam",
     "bottom",
+    "teamDataFetcher",
     "testimonial",
     "frame26",
     "frame25",
@@ -1384,15 +1533,15 @@ const PlasmicDescendants = {
     "servicesSection",
     "titleSection",
     "h2",
+    "serviceCard",
     "columns",
-    "img",
     "h5"
   ],
 
   titleSection: ["titleSection", "h2"],
   h2: ["h2"],
-  columns: ["columns", "img", "h5"],
-  img: ["img"],
+  serviceCard: ["serviceCard"],
+  columns: ["columns", "h5"],
   h5: ["h5"],
   section: [
     "section",
@@ -1401,6 +1550,7 @@ const PlasmicDescendants = {
     "top",
     "meetTheTeam",
     "bottom",
+    "teamDataFetcher",
     "testimonial",
     "frame26",
     "frame25",
@@ -1411,11 +1561,20 @@ const PlasmicDescendants = {
     "footer"
   ],
 
-  teamSection: ["teamSection", "teamInner", "top", "meetTheTeam", "bottom"],
-  teamInner: ["teamInner", "top", "meetTheTeam", "bottom"],
+  teamSection: [
+    "teamSection",
+    "teamInner",
+    "top",
+    "meetTheTeam",
+    "bottom",
+    "teamDataFetcher"
+  ],
+
+  teamInner: ["teamInner", "top", "meetTheTeam", "bottom", "teamDataFetcher"],
   top: ["top", "meetTheTeam"],
   meetTheTeam: ["meetTheTeam"],
-  bottom: ["bottom"],
+  bottom: ["bottom", "teamDataFetcher"],
+  teamDataFetcher: ["teamDataFetcher"],
   testimonial: [
     "testimonial",
     "frame26",
@@ -1517,8 +1676,8 @@ export const PlasmicHomepage = Object.assign(
     servicesSection: makeNodeComponent("servicesSection"),
     titleSection: makeNodeComponent("titleSection"),
     h2: makeNodeComponent("h2"),
+    serviceCard: makeNodeComponent("serviceCard"),
     columns: makeNodeComponent("columns"),
-    img: makeNodeComponent("img"),
     h5: makeNodeComponent("h5"),
     section: makeNodeComponent("section"),
     teamSection: makeNodeComponent("teamSection"),
@@ -1526,6 +1685,7 @@ export const PlasmicHomepage = Object.assign(
     top: makeNodeComponent("top"),
     meetTheTeam: makeNodeComponent("meetTheTeam"),
     bottom: makeNodeComponent("bottom"),
+    teamDataFetcher: makeNodeComponent("teamDataFetcher"),
     testimonial: makeNodeComponent("testimonial"),
     frame26: makeNodeComponent("frame26"),
     frame25: makeNodeComponent("frame25"),

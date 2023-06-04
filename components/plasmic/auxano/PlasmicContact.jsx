@@ -433,21 +433,14 @@ function PlasmicContact__RenderFunc(props) {
                               {
                                 type: "InteractionArgLoc",
                                 actionName: "dataSourceOp",
-                                interactionUuid: "Su2zYEEcR",
+                                interactionUuid: "NXz8_004l",
                                 componentUuid: "m0O9QXIre9",
                                 argName: "dataOp"
                               },
                               () => ({
-                                sourceId: "oQuoSGr4isjm332ucSNNpL",
-                                opId: "d75a53d2-11bf-4396-9243-92e3c638a570",
-                                userArgs: {
-                                  variables: [
-                                    $state.nameField.value,
-                                    $state.email.value,
-                                    $state.subject.value,
-                                    $state.message.value
-                                  ]
-                                },
+                                sourceId: "pyepVF7iKCdPmJibGg354X",
+                                opId: "cbd1da4e-c02a-4a08-a291-5023aa21406b",
+                                userArgs: {},
                                 cacheKey: null,
                                 invalidatedKeys: [],
                                 roleId: null
@@ -458,7 +451,7 @@ function PlasmicContact__RenderFunc(props) {
                             {
                               type: "InteractionLoc",
                               actionName: "dataSourceOp",
-                              interactionUuid: "Su2zYEEcR",
+                              interactionUuid: "NXz8_004l",
                               componentUuid: "m0O9QXIre9"
                             },
                             () =>
@@ -526,89 +519,10 @@ function PlasmicContact__RenderFunc(props) {
                         {
                           type: "InteractionLoc",
                           actionName: "dataSourceOp",
-                          interactionUuid: "Su2zYEEcR",
+                          interactionUuid: "NXz8_004l",
                           componentUuid: "m0O9QXIre9"
                         },
                         $steps["airtableGetList"]
-                      );
-                    }
-                  }}
-                  onFinishFailed={async data => {
-                    const $steps = {};
-                    $steps["refreshData"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            queryInvalidation: __wrapUserFunction(
-                              {
-                                type: "InteractionArgLoc",
-                                actionName: "invalidateDataQuery",
-                                interactionUuid: "uPSFs3Nup",
-                                componentUuid: "m0O9QXIre9",
-                                argName: "queryInvalidation"
-                              },
-                              () => ["plasmic_refresh_all"]
-                            )
-                          };
-                          return __wrapUserFunction(
-                            {
-                              type: "InteractionLoc",
-                              actionName: "invalidateDataQuery",
-                              interactionUuid: "uPSFs3Nup",
-                              componentUuid: "m0O9QXIre9"
-                            },
-                            () =>
-                              (async ({ queryInvalidation }) => {
-                                if (!queryInvalidation) {
-                                  return;
-                                }
-                                if (
-                                  queryInvalidation.find(
-                                    key => key === "plasmic_refresh_all"
-                                  )
-                                ) {
-                                  await Promise.all(
-                                    Array.from(cache.keys()).map(async key =>
-                                      mutate(key)
-                                    )
-                                  );
-                                  return;
-                                }
-                                await Promise.all(
-                                  queryInvalidation.map(async invalidateKey =>
-                                    Promise.all(
-                                      Array.from(cache.keys()).map(
-                                        async key => {
-                                          if (
-                                            typeof key === "string" &&
-                                            key.includes(
-                                              `.$.${invalidateKey}.$.`
-                                            )
-                                          ) {
-                                            return mutate(key);
-                                          }
-                                          return Promise.resolve();
-                                        }
-                                      )
-                                    )
-                                  )
-                                );
-                              })?.apply(null, [actionArgs]),
-                            actionArgs
-                          );
-                        })()
-                      : undefined;
-                    if (
-                      typeof $steps["refreshData"] === "object" &&
-                      typeof $steps["refreshData"].then === "function"
-                    ) {
-                      $steps["refreshData"] = await __wrapUserPromise(
-                        {
-                          type: "InteractionLoc",
-                          actionName: "invalidateDataQuery",
-                          interactionUuid: "uPSFs3Nup",
-                          componentUuid: "m0O9QXIre9"
-                        },
-                        $steps["refreshData"]
                       );
                     }
                   }}

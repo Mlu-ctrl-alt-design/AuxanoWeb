@@ -125,9 +125,9 @@ function PlasmicFooter__RenderFunc(props) {
                 displayWidth={"220px"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/auxano/images/gradient3Xpng.png",
-                  fullWidth: 221,
-                  fullHeight: 142,
+                  src: "/plasmic/auxano/images/group10883Xpng.png",
+                  fullWidth: 406,
+                  fullHeight: 191,
                   aspectRatio: undefined
                 }}
               />
