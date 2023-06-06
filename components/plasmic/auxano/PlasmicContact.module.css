@@ -570,7 +570,7 @@
     margin-left: 0px;
   }
 }
-.formField__jMp52:global(.__wab_instance) {
+.name:global(.__wab_instance) {
   width: 100%;
   min-width: 0;
 }
@@ -581,7 +581,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__fQWg:global(.__wab_instance) {
+.email2:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -593,7 +593,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__v83Q0:global(.__wab_instance) {
+.subject2:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   min-width: 0;
@@ -605,7 +605,7 @@
   max-width: 100%;
   object-fit: cover;
 }
-.formField__lzLdC:global(.__wab_instance) {
+.message2:global(.__wab_instance) {
   width: 100%;
   margin-bottom: 24px;
   height: 164px;

@@ -442,19 +442,29 @@ function PlasmicContact__RenderFunc(props) {
                                 },
                                 () => ({
                                   sourceId: "oQuoSGr4isjm332ucSNNpL",
-                                  opId: "d75a53d2-11bf-4396-9243-92e3c638a570",
+                                  opId: "895b5916-1624-45ad-918f-7ae0e1506238",
                                   userArgs: {
                                     variables: [
-                                      $state.nameField.value,
-                                      $state.email.value,
-                                      $state.subject.value,
-                                      $state.message.value
+                                      $state.form2.value.Name,
+                                      $state.form2.value.Email,
+                                      $state.form2.value.Subject,
+                                      $state.form2.value.Message
                                     ]
                                   },
                                   cacheKey: null,
                                   invalidatedKeys: ["plasmic_refresh_all"],
                                   roleId: null
                                 })
+                              ),
+                              continueOnError: __wrapUserFunction(
+                                {
+                                  type: "InteractionArgLoc",
+                                  actionName: "dataSourceOp",
+                                  interactionUuid: "NXz8_004l",
+                                  componentUuid: "m0O9QXIre9",
+                                  argName: "continueOnError"
+                                },
+                                () => true
                               )
                             };
                             return __wrapUserFunction(
@@ -592,10 +602,9 @@ function PlasmicContact__RenderFunc(props) {
                         className={classNames(projectcss.all, sty.freeBox)}
                       >
                         <FormItemWrapper
-                          className={classNames(
-                            "__wab_instance",
-                            sty.formField__jMp52
-                          )}
+                          data-plasmic-name={"name"}
+                          data-plasmic-override={overrides.name}
+                          className={classNames("__wab_instance", sty.name)}
                           label={
                             <div
                               className={classNames(
@@ -607,7 +616,7 @@ function PlasmicContact__RenderFunc(props) {
                               {"Name"}
                             </div>
                           }
-                          name={"name"}
+                          name={"Name"}
                           rules={[
                             {
                               ruleType: "required",
@@ -657,10 +666,9 @@ function PlasmicContact__RenderFunc(props) {
                           })()}
                         </FormItemWrapper>
                         <FormItemWrapper
-                          className={classNames(
-                            "__wab_instance",
-                            sty.formField__fQWg
-                          )}
+                          data-plasmic-name={"email2"}
+                          data-plasmic-override={overrides.email2}
+                          className={classNames("__wab_instance", sty.email2)}
                           label={
                             <div
                               className={classNames(
@@ -672,6 +680,7 @@ function PlasmicContact__RenderFunc(props) {
                               {"Email"}
                             </div>
                           }
+                          name={"Email"}
                           rules={[
                             {
                               ruleType: "required",
@@ -724,10 +733,9 @@ function PlasmicContact__RenderFunc(props) {
                       </p.Stack>
                     ) : null}
                     <FormItemWrapper
-                      className={classNames(
-                        "__wab_instance",
-                        sty.formField__v83Q0
-                      )}
+                      data-plasmic-name={"subject2"}
+                      data-plasmic-override={overrides.subject2}
+                      className={classNames("__wab_instance", sty.subject2)}
                       label={
                         <div
                           className={classNames(
@@ -739,6 +747,13 @@ function PlasmicContact__RenderFunc(props) {
                           {"Subject"}
                         </div>
                       }
+                      name={"Subject"}
+                      rules={[
+                        {
+                          ruleType: "required",
+                          message: "This field cannot be empty"
+                        }
+                      ]}
                     >
                       {(() => {
                         const child$Props = {
@@ -779,10 +794,9 @@ function PlasmicContact__RenderFunc(props) {
                       })()}
                     </FormItemWrapper>
                     <FormItemWrapper
-                      className={classNames(
-                        "__wab_instance",
-                        sty.formField__lzLdC
-                      )}
+                      data-plasmic-name={"message2"}
+                      data-plasmic-override={overrides.message2}
+                      className={classNames("__wab_instance", sty.message2)}
                       label={
                         <div
                           className={classNames(
@@ -794,7 +808,7 @@ function PlasmicContact__RenderFunc(props) {
                           {"Message"}
                         </div>
                       }
-                      name={"message"}
+                      name={"Message"}
                     >
                       {(() => {
                         const child$Props = {
@@ -1064,9 +1078,13 @@ const PlasmicDescendants = {
     "frame2400",
     "form2",
     "freeBox",
+    "name",
     "nameField",
+    "email2",
     "email",
+    "subject2",
     "subject",
+    "message2",
     "message",
     "button",
     "section",
@@ -1109,9 +1127,13 @@ const PlasmicDescendants = {
     "frame2400",
     "form2",
     "freeBox",
+    "name",
     "nameField",
+    "email2",
     "email",
+    "subject2",
     "subject",
+    "message2",
     "message",
     "button",
     "section",
@@ -1137,9 +1159,13 @@ const PlasmicDescendants = {
     "frame2400",
     "form2",
     "freeBox",
+    "name",
     "nameField",
+    "email2",
     "email",
+    "subject2",
     "subject",
+    "message2",
     "message",
     "button"
   ],
@@ -1153,9 +1179,13 @@ const PlasmicDescendants = {
     "frame2400",
     "form2",
     "freeBox",
+    "name",
     "nameField",
+    "email2",
     "email",
+    "subject2",
     "subject",
+    "message2",
     "message",
     "button"
   ],
@@ -1163,17 +1193,25 @@ const PlasmicDescendants = {
   form2: [
     "form2",
     "freeBox",
+    "name",
     "nameField",
+    "email2",
     "email",
+    "subject2",
     "subject",
+    "message2",
     "message",
     "button"
   ],
 
-  freeBox: ["freeBox", "nameField", "email"],
+  freeBox: ["freeBox", "name", "nameField", "email2", "email"],
+  name: ["name", "nameField"],
   nameField: ["nameField"],
+  email2: ["email2", "email"],
   email: ["email"],
+  subject2: ["subject2", "subject"],
   subject: ["subject"],
+  message2: ["message2", "message"],
   message: ["message"],
   button: ["button"],
   section: [
@@ -1262,9 +1300,13 @@ export const PlasmicContact = Object.assign(
     frame2400: makeNodeComponent("frame2400"),
     form2: makeNodeComponent("form2"),
     freeBox: makeNodeComponent("freeBox"),
+    _name: makeNodeComponent("name"),
     nameField: makeNodeComponent("nameField"),
+    email2: makeNodeComponent("email2"),
     email: makeNodeComponent("email"),
+    subject2: makeNodeComponent("subject2"),
     subject: makeNodeComponent("subject"),
+    message2: makeNodeComponent("message2"),
     message: makeNodeComponent("message"),
     button: makeNodeComponent("button"),
     section: makeNodeComponent("section"),
