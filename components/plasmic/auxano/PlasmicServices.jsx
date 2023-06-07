@@ -213,6 +213,7 @@ function PlasmicServices__RenderFunc(props) {
               }
               noAutoRepeat={false}
               noLayout={false}
+              table={"services"}
               useDraft={false}
             >
               <ph.DataCtxReader>
