@@ -303,8 +303,7 @@
           "displayName": "plasmic-antd5-date-picker",
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerDatePicker"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "kmmGrmCVRJPgZ5NNJMDQ4v",
@@ -574,6 +573,32 @@
             "modulePath": "../pages/thank-you.jsx"
           },
           "cssFilePath": "plasmic/auxano/PlasmicThankYou.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "-xDmv7pDDD",
+          "name": "Team",
+          "type": "managed",
+          "projectId": "oGQcGtbFzYohLFbpGrRxL3",
+          "renderModuleFilePath": "plasmic/auxano/PlasmicTeam.jsx",
+          "importSpec": {
+            "modulePath": "../pages/team.jsx"
+          },
+          "cssFilePath": "plasmic/auxano/PlasmicTeam.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "cvPYn_MPiK",
+          "name": "Appointments",
+          "type": "managed",
+          "projectId": "oGQcGtbFzYohLFbpGrRxL3",
+          "renderModuleFilePath": "plasmic/auxano/PlasmicAppointments.jsx",
+          "importSpec": {
+            "modulePath": "../pages/appointments.jsx"
+          },
+          "cssFilePath": "plasmic/auxano/PlasmicAppointments.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }

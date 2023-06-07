@@ -1,0 +1,186 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  min-height: 0;
+}
+.navBarFinal:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+.team:global(.__wab_instance) {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  object-fit: cover;
+  position: relative;
+  height: auto;
+  min-width: 0;
+  padding: 24px;
+}
+@media (max-width: 375px) {
+  .team:global(.__wab_instance) {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+.freeBox__nl8Bt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
+.freeBox__nl8Bt > :global(.__wab_flex-container) {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+  margin-top: calc(0px - 12px);
+  height: calc(100% + 12px);
+}
+.freeBox__nl8Bt > :global(.__wab_flex-container) > *,
+.freeBox__nl8Bt > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__nl8Bt > :global(.__wab_flex-container) > picture > img,
+.freeBox__nl8Bt
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 12px;
+}
+.image:global(.__wab_instance) {
+  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  min-height: 0;
+}
+.title:global(.__wab_instance) {
+  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  font-family: "Golos Text", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.name:global(.__wab_instance) {
+  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.text__nxC3E {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.text__za3Bq {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.freeBox___4UMWg {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 24px;
+}
+@media (max-width: 375px) {
+  .freeBox___4UMWg {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+.text__i39FR {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  min-width: 0;
+}
+.text__vvpoH {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.appointment:global(.__wab_instance) {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  object-fit: cover;
+  height: 120px;
+  min-width: 0;
+  flex-shrink: 0;
+}
+.freeBox__vSU {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 8px;
+}
+.cmsEntryField:global(.__wab_instance) {
+  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  min-height: 0;
+}
+.text___4PqLu {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.text__akZkk {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.footer:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}

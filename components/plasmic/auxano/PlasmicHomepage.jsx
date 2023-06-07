@@ -33,7 +33,6 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: Ybl9MM68MVSW/
 import ZapIcon from "./icons/PlasmicIcon__Zap"; // plasmic-import: jioqPss8S/icon
 import MailIcon from "./icons/PlasmicIcon__Mail"; // plasmic-import: _ML9L86z7M/icon
 import BarChart2Icon from "./icons/PlasmicIcon__BarChart2"; // plasmic-import: SsHUxMu660/icon
-import IconOutlinearrowRight2Icon from "./icons/PlasmicIcon__IconOutlinearrowRight2"; // plasmic-import: 1Aov_gh-ME/icon
 
 export const PlasmicHomepage__VariantProps = new Array();
 
@@ -790,6 +789,7 @@ function PlasmicHomepage__RenderFunc(props) {
               }
               noAutoRepeat={false}
               noLayout={false}
+              table={"services"}
               useDraft={false}
             >
               <ph.DataCtxReader>
@@ -802,8 +802,10 @@ function PlasmicHomepage__RenderFunc(props) {
                     className={classNames(projectcss.all, sty.serviceCard)}
                   >
                     <p.PlasmicImg
+                      data-plasmic-name={"img"}
+                      data-plasmic-override={overrides.img}
                       alt={""}
-                      className={classNames(sty.img___5Pv5Z)}
+                      className={classNames(sty.img)}
                       displayHeight={"56px"}
                       displayMaxHeight={"none"}
                       displayMaxWidth={"100%"}
@@ -885,99 +887,6 @@ function PlasmicHomepage__RenderFunc(props) {
                 )}
               </ph.DataCtxReader>
             </CmsQueryRepeater>
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"columns"}
-              data-plasmic-override={overrides.columns}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns)}
-            >
-              <p.Stack
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.column__uYw0O)}
-              >
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__npMyf)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"25%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"100%"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/auxano/images/gradient3Xpng.png",
-                    fullWidth: 221,
-                    fullHeight: 142,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__ralEc
-                  )}
-                >
-                  <React.Fragment>
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <h5
-                        data-plasmic-name={"h5"}
-                        data-plasmic-override={overrides.h5}
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.h5,
-                          projectcss.__wab_text,
-                          sty.h5
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#484848" }}
-                          >
-                            {"BUSINESS RESCUE AND TURN AROUND STRATEGY"}
-                          </span>
-                        </React.Fragment>
-                      </h5>
-                    }
-
-                    <React.Fragment>{""}</React.Fragment>
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__br0NX
-                  )}
-                >
-                  {
-                    "we understand that every business is unique, and we tailor our turnaround strategies to each client's specific needs. Our goal is to help businesses achieve financial stability and long-term success by implementing proven strategies that are customized to their situation."
-                  }
-                </div>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2___8FNws)}
-                  link={`/contact`}
-                  submitsForm={true}
-                >
-                  {"Get in touch"}
-                </Button2>
-              </p.Stack>
-              {(
-                hasVariant(globalVariants, "screen", "tabletOnly") ? true : true
-              ) ? (
-                <div
-                  className={classNames(projectcss.all, sty.column__l6KUx)}
-                />
-              ) : null}
-            </p.Stack>
           </p.Stack>
           <section
             data-plasmic-name={"section"}
@@ -1029,6 +938,20 @@ function PlasmicHomepage__RenderFunc(props) {
                         : "Our goal and vision remain steadfast in that we consistently strive to be the leading competitively business consultancy in South Africa"}
                     </div>
                   </p.Stack>
+                  <Button2
+                    className={classNames("__wab_instance", sty.button2__m5Uxm)}
+                    link={`/team`}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__loCfJ
+                      )}
+                    >
+                      {"View Full team"}
+                    </div>
+                  </Button2>
                 </div>
                 <div
                   data-plasmic-name={"bottom"}
@@ -1169,7 +1092,9 @@ function PlasmicHomepage__RenderFunc(props) {
                   </div>
                 </p.Stack>
                 {true ? (
-                  <div
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
                     className={classNames(projectcss.all, sty.freeBox__kBkC)}
                   >
                     <CmsQueryRepeater
@@ -1245,54 +1170,8 @@ function PlasmicHomepage__RenderFunc(props) {
                         )}
                       </ph.DataCtxReader>
                     </CmsQueryRepeater>
-                  </div>
-                ) : null}
-                <p.Stack
-                  as={"div"}
-                  data-plasmic-name={"buttonPrimaryWithIcon"}
-                  data-plasmic-override={overrides.buttonPrimaryWithIcon}
-                  hasGap={true}
-                  className={classNames(
-                    projectcss.all,
-                    sty.buttonPrimaryWithIcon
-                  )}
-                >
-                  <p.Stack
-                    as={"div"}
-                    data-plasmic-name={"frame1"}
-                    data-plasmic-override={overrides.frame1}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.frame1)}
-                  >
-                    <div
-                      data-plasmic-name={"seeAllReviews"}
-                      data-plasmic-override={overrides.seeAllReviews}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.seeAllReviews
-                      )}
-                    >
-                      {"See all reviews "}
-                    </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__zT7Ep)}
-                    >
-                      <p.Stack
-                        as={"div"}
-                        data-plasmic-name={"icon"}
-                        data-plasmic-override={overrides.icon}
-                        hasGap={true}
-                        className={classNames(projectcss.all, sty.icon)}
-                      >
-                        <IconOutlinearrowRight2Icon
-                          className={classNames(projectcss.all, sty.svg__frkdn)}
-                          role={"img"}
-                        />
-                      </p.Stack>
-                    </div>
                   </p.Stack>
-                </p.Stack>
+                ) : null}
               </p.Stack>
             </p.Stack>
             <Footer
@@ -1347,8 +1226,7 @@ const PlasmicDescendants = {
     "titleSection",
     "h2",
     "serviceCard",
-    "columns",
-    "h5",
+    "img",
     "section",
     "teamSection",
     "teamInner",
@@ -1359,10 +1237,6 @@ const PlasmicDescendants = {
     "testimonial",
     "frame26",
     "frame25",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "seeAllReviews",
-    "icon",
     "footer"
   ],
 
@@ -1534,15 +1408,13 @@ const PlasmicDescendants = {
     "titleSection",
     "h2",
     "serviceCard",
-    "columns",
-    "h5"
+    "img"
   ],
 
   titleSection: ["titleSection", "h2"],
   h2: ["h2"],
-  serviceCard: ["serviceCard"],
-  columns: ["columns", "h5"],
-  h5: ["h5"],
+  serviceCard: ["serviceCard", "img"],
+  img: ["img"],
   section: [
     "section",
     "teamSection",
@@ -1554,10 +1426,6 @@ const PlasmicDescendants = {
     "testimonial",
     "frame26",
     "frame25",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "seeAllReviews",
-    "icon",
     "footer"
   ],
 
@@ -1575,36 +1443,9 @@ const PlasmicDescendants = {
   meetTheTeam: ["meetTheTeam"],
   bottom: ["bottom", "teamDataFetcher"],
   teamDataFetcher: ["teamDataFetcher"],
-  testimonial: [
-    "testimonial",
-    "frame26",
-    "frame25",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "seeAllReviews",
-    "icon"
-  ],
-
-  frame26: [
-    "frame26",
-    "frame25",
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "seeAllReviews",
-    "icon"
-  ],
-
+  testimonial: ["testimonial", "frame26", "frame25"],
+  frame26: ["frame26", "frame25"],
   frame25: ["frame25"],
-  buttonPrimaryWithIcon: [
-    "buttonPrimaryWithIcon",
-    "frame1",
-    "seeAllReviews",
-    "icon"
-  ],
-
-  frame1: ["frame1", "seeAllReviews", "icon"],
-  seeAllReviews: ["seeAllReviews"],
-  icon: ["icon"],
   footer: ["footer"]
 };
 
@@ -1677,8 +1518,7 @@ export const PlasmicHomepage = Object.assign(
     titleSection: makeNodeComponent("titleSection"),
     h2: makeNodeComponent("h2"),
     serviceCard: makeNodeComponent("serviceCard"),
-    columns: makeNodeComponent("columns"),
-    h5: makeNodeComponent("h5"),
+    img: makeNodeComponent("img"),
     section: makeNodeComponent("section"),
     teamSection: makeNodeComponent("teamSection"),
     teamInner: makeNodeComponent("teamInner"),
@@ -1689,10 +1529,6 @@ export const PlasmicHomepage = Object.assign(
     testimonial: makeNodeComponent("testimonial"),
     frame26: makeNodeComponent("frame26"),
     frame25: makeNodeComponent("frame25"),
-    buttonPrimaryWithIcon: makeNodeComponent("buttonPrimaryWithIcon"),
-    frame1: makeNodeComponent("frame1"),
-    seeAllReviews: makeNodeComponent("seeAllReviews"),
-    icon: makeNodeComponent("icon"),
     footer: makeNodeComponent("footer"),
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

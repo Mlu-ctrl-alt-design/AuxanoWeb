@@ -65,8 +65,8 @@ function PlasmicNavBarFinal__RenderFunc(props) {
   });
   return (
     <NavigationBar
-      data-plasmic-name={"root"}
-      data-plasmic-override={overrides.root}
+      data-plasmic-name={"navBar"}
+      data-plasmic-override={overrides.navBar}
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       brand={
@@ -107,7 +107,7 @@ function PlasmicNavBarFinal__RenderFunc(props) {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
-        sty.root
+        sty.navBar
       )}
       closeButton={
         <p.PlasmicImg
@@ -164,6 +164,19 @@ function PlasmicNavBarFinal__RenderFunc(props) {
                 projectcss.all,
                 projectcss.a,
                 projectcss.__wab_text,
+                sty.link__uLev
+              )}
+              component={Link}
+              href={`/appointments`}
+              platform={"nextjs"}
+            >
+              {"Appointments"}
+            </p.PlasmicLink>
+            <p.PlasmicLink
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                projectcss.__wab_text,
                 sty.link__lYrGj
               )}
               component={Link}
@@ -214,7 +227,7 @@ function PlasmicNavBarFinal__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox"],
+  navBar: ["navBar", "freeBox"],
   freeBox: ["freeBox"]
 };
 
@@ -237,7 +250,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "navBar") {
     func.displayName = "PlasmicNavBarFinal";
   } else {
     func.displayName = `PlasmicNavBarFinal.${nodeName}`;
@@ -247,7 +260,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicNavBarFinal = Object.assign(
   // Top-level PlasmicNavBarFinal renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("navBar"),
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
