@@ -271,6 +271,7 @@ function PlasmicServices__RenderFunc(props) {
                                 "__wab_instance",
                                 sty.button2
                               )}
+                              link={`/contact`}
                             >
                               {"Get in touch"}
                             </Button2>

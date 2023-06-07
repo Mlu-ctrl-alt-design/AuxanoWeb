@@ -931,6 +931,21 @@
           "id": "6Tx8Sy_E9",
           "name": "Group 1088@3x.png",
           "filePath": "../public/plasmic/auxano/images/group10883Xpng.png"
+        },
+        {
+          "id": "9FrOBINP_",
+          "name": "Logo Orange.png",
+          "filePath": "../public/plasmic/auxano/images/logoOrangepng.png"
+        },
+        {
+          "id": "dmzApzvMx",
+          "name": "Logo Orange@2x.png",
+          "filePath": "../public/plasmic/auxano/images/logoOrange2Xpng.png"
+        },
+        {
+          "id": "9sSoSMzrZ",
+          "name": "Logo Dark@2x.png",
+          "filePath": "../public/plasmic/auxano/images/logoDark2Xpng.png"
         }
       ],
       "indirect": false,

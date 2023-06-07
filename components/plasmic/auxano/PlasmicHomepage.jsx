@@ -814,9 +814,9 @@ function PlasmicHomepage__RenderFunc(props) {
                       displayWidth={"auto"}
                       loading={"lazy"}
                       src={{
-                        src: "/plasmic/auxano/images/group10883Xpng.png",
-                        fullWidth: 406,
-                        fullHeight: 191,
+                        src: "/plasmic/auxano/images/logoDark2Xpng.png",
+                        fullWidth: 277,
+                        fullHeight: 119,
                         aspectRatio: undefined
                       }}
                     />
@@ -889,9 +889,9 @@ function PlasmicHomepage__RenderFunc(props) {
             </CmsQueryRepeater>
           </p.Stack>
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
+            data-plasmic-name={"teamSection2"}
+            data-plasmic-override={overrides.teamSection2}
+            className={classNames(projectcss.all, sty.teamSection2)}
           >
             <p.Stack
               as={"div"}
@@ -1049,137 +1049,137 @@ function PlasmicHomepage__RenderFunc(props) {
                 </div>
               </div>
             </p.Stack>
+          </section>
+          <p.Stack
+            as={"div"}
+            data-plasmic-name={"testimonial"}
+            data-plasmic-override={overrides.testimonial}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.testimonial)}
+          >
             <p.Stack
               as={"div"}
-              data-plasmic-name={"testimonial"}
-              data-plasmic-override={overrides.testimonial}
+              data-plasmic-name={"frame26"}
+              data-plasmic-override={overrides.frame26}
               hasGap={true}
-              className={classNames(projectcss.all, sty.testimonial)}
+              className={classNames(projectcss.all, sty.frame26)}
             >
               <p.Stack
                 as={"div"}
-                data-plasmic-name={"frame26"}
-                data-plasmic-override={overrides.frame26}
+                data-plasmic-name={"frame25"}
+                data-plasmic-override={overrides.frame25}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.frame26)}
+                className={classNames(projectcss.all, sty.frame25)}
               >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cFwF
+                  )}
+                >
+                  {"People trust us"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__hovC
+                  )}
+                >
+                  {
+                    "We’ve had the priviledge of helping out a few businesses, why take our word for it, Listen to what our clients have to say."
+                  }
+                </div>
+              </p.Stack>
+              {true ? (
                 <p.Stack
                   as={"div"}
-                  data-plasmic-name={"frame25"}
-                  data-plasmic-override={overrides.frame25}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.frame25)}
+                  className={classNames(projectcss.all, sty.freeBox__kBkC)}
                 >
-                  <div
+                  <CmsQueryRepeater
                     className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__cFwF
+                      "__wab_instance",
+                      sty.cmsDataFetcher__hxdab
                     )}
-                  >
-                    {"People trust us"}
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__hovC
-                    )}
-                  >
-                    {
-                      "We’ve had the priviledge of helping out a few businesses, why take our word for it, Listen to what our clients have to say."
-                    }
-                  </div>
-                </p.Stack>
-                {true ? (
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__kBkC)}
-                  >
-                    <CmsQueryRepeater
-                      className={classNames(
-                        "__wab_instance",
-                        sty.cmsDataFetcher__hxdab
-                      )}
-                      desc={false}
-                      emptyMessage={
-                        <ph.DataCtxReader>
-                          {$ctx => (
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__tMfx8
-                              )}
-                            >
-                              {"No matching published entries found."}
-                            </div>
-                          )}
-                        </ph.DataCtxReader>
-                      }
-                      filterField={"_id"}
-                      forceEmptyState={false}
-                      forceLoadingState={false}
-                      limit={3}
-                      loadingMessage={
-                        <ph.DataCtxReader>
-                          {$ctx => (
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__dZFa
-                              )}
-                            >
-                              {"Loading..."}
-                            </div>
-                          )}
-                        </ph.DataCtxReader>
-                      }
-                      noAutoRepeat={false}
-                      noLayout={false}
-                      table={"testimonials"}
-                      useDraft={false}
-                    >
+                    desc={false}
+                    emptyMessage={
                       <ph.DataCtxReader>
                         {$ctx => (
-                          <p.Stack
-                            as={"div"}
-                            hasGap={true}
+                          <div
                             className={classNames(
                               projectcss.all,
-                              sty.freeBox__w3Toh
+                              projectcss.__wab_text,
+                              sty.text__tMfx8
                             )}
                           >
-                            <CmsRowField
-                              className={classNames(
-                                "__wab_instance",
-                                sty.cmsEntryField__aXcsG
-                              )}
-                            />
-
-                            <CmsRowField
-                              className={classNames(
-                                "__wab_instance",
-                                sty.cmsEntryField__dXnLq
-                              )}
-                              field={"content"}
-                            />
-                          </p.Stack>
+                            {"No matching published entries found."}
+                          </div>
                         )}
                       </ph.DataCtxReader>
-                    </CmsQueryRepeater>
-                  </p.Stack>
-                ) : null}
-              </p.Stack>
+                    }
+                    filterField={"_id"}
+                    forceEmptyState={false}
+                    forceLoadingState={false}
+                    limit={3}
+                    loadingMessage={
+                      <ph.DataCtxReader>
+                        {$ctx => (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__dZFa
+                            )}
+                          >
+                            {"Loading..."}
+                          </div>
+                        )}
+                      </ph.DataCtxReader>
+                    }
+                    noAutoRepeat={false}
+                    noLayout={false}
+                    table={"testimonials"}
+                    useDraft={false}
+                  >
+                    <ph.DataCtxReader>
+                      {$ctx => (
+                        <p.Stack
+                          as={"div"}
+                          hasGap={true}
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__w3Toh
+                          )}
+                        >
+                          <CmsRowField
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cmsEntryField__aXcsG
+                            )}
+                          />
+
+                          <CmsRowField
+                            className={classNames(
+                              "__wab_instance",
+                              sty.cmsEntryField__dXnLq
+                            )}
+                            field={"content"}
+                          />
+                        </p.Stack>
+                      )}
+                    </ph.DataCtxReader>
+                  </CmsQueryRepeater>
+                </p.Stack>
+              ) : null}
             </p.Stack>
-            <Footer
-              data-plasmic-name={"footer"}
-              data-plasmic-override={overrides.footer}
-              className={classNames("__wab_instance", sty.footer)}
-            />
-          </section>
+          </p.Stack>
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -1227,7 +1227,7 @@ const PlasmicDescendants = {
     "h2",
     "serviceCard",
     "img",
-    "section",
+    "teamSection2",
     "teamSection",
     "teamInner",
     "top",
@@ -1415,18 +1415,14 @@ const PlasmicDescendants = {
   h2: ["h2"],
   serviceCard: ["serviceCard", "img"],
   img: ["img"],
-  section: [
-    "section",
+  teamSection2: [
+    "teamSection2",
     "teamSection",
     "teamInner",
     "top",
     "meetTheTeam",
     "bottom",
-    "teamDataFetcher",
-    "testimonial",
-    "frame26",
-    "frame25",
-    "footer"
+    "teamDataFetcher"
   ],
 
   teamSection: [
@@ -1519,7 +1515,7 @@ export const PlasmicHomepage = Object.assign(
     h2: makeNodeComponent("h2"),
     serviceCard: makeNodeComponent("serviceCard"),
     img: makeNodeComponent("img"),
-    section: makeNodeComponent("section"),
+    teamSection2: makeNodeComponent("teamSection2"),
     teamSection: makeNodeComponent("teamSection"),
     teamInner: makeNodeComponent("teamInner"),
     top: makeNodeComponent("top"),

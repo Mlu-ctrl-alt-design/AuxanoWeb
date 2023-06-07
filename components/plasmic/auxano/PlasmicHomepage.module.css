@@ -1407,7 +1407,7 @@
   max-width: 100%;
   min-width: 0;
 }
-.section {
+.teamSection2 {
   display: grid;
   position: relative;
   align-content: flex-start;
@@ -1421,10 +1421,21 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
-  padding: 8px 0;
+  padding: 8px 128px;
 }
-:where(.section > *) {
+:where(.teamSection2 > *) {
   grid-column: 4;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .teamSection2 {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  :where(.teamSection2 > *) {
+    grid-column: 4;
+  }
 }
 .teamSection {
   width: 100%;
@@ -1723,8 +1734,12 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .testimonial {
     width: 100%;
-    grid-column-start: 2;
-    grid-column-end: -2;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .testimonial > :global(.__wab_flex-container) {
+    min-width: 0;
   }
 }
 .frame26 {
@@ -1925,6 +1940,5 @@
   max-width: 100%;
   position: relative;
   width: 100%;
-  grid-column-start: 1;
-  grid-column-end: -1;
+  min-width: 0;
 }
