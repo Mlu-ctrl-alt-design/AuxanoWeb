@@ -77,8 +77,8 @@ function PlasmicAppointments__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"appointments2"}
+          data-plasmic-override={overrides.appointments2}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -88,7 +88,7 @@ function PlasmicAppointments__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.appointments2
           )}
         >
           <NavBarFinal
@@ -196,7 +196,7 @@ function PlasmicAppointments__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBarFinal", "appointments", "footer"],
+  appointments2: ["appointments2", "navBarFinal", "appointments", "footer"],
   navBarFinal: ["navBarFinal"],
   appointments: ["appointments"],
   footer: ["footer"]
@@ -221,7 +221,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "appointments2") {
     func.displayName = "PlasmicAppointments";
   } else {
     func.displayName = `PlasmicAppointments.${nodeName}`;
@@ -231,7 +231,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicAppointments = Object.assign(
   // Top-level PlasmicAppointments renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("appointments2"),
   {
     // Helper components rendering sub-elements
     navBarFinal: makeNodeComponent("navBarFinal"),

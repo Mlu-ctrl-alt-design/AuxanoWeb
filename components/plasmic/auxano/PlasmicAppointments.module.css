@@ -1,4 +1,4 @@
-.root {
+.appointments2 {
   display: grid;
   flex-direction: column;
   position: relative;
@@ -8,6 +8,7 @@
   justify-items: center;
   justify-content: flex-start;
   align-items: center;
+  background: var(--token-_SJKE-afz);
   min-width: 0;
   min-height: 0;
   grid-template-columns:
@@ -18,7 +19,7 @@
     )
     var(--plsmc-viewport-gap) minmax(0, var(--plsmc-wide-chunk)) 1fr;
 }
-:where(.root > *) {
+:where(.appointments2 > *) {
   grid-column: 4;
 }
 .navBarFinal:global(.__wab_instance):global(.__wab_instance) {

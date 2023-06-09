@@ -77,8 +77,8 @@ function PlasmicTeam__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"teampage"}
+          data-plasmic-override={overrides.teampage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -88,7 +88,7 @@ function PlasmicTeam__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.teampage
           )}
         >
           <NavBarFinal
@@ -267,8 +267,8 @@ function PlasmicTeam__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  teampage: [
+    "teampage",
     "navBarFinal",
     "team",
     "image",
@@ -308,7 +308,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "teampage") {
     func.displayName = "PlasmicTeam";
   } else {
     func.displayName = `PlasmicTeam.${nodeName}`;
@@ -318,7 +318,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicTeam = Object.assign(
   // Top-level PlasmicTeam renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("teampage"),
   {
     // Helper components rendering sub-elements
     navBarFinal: makeNodeComponent("navBarFinal"),

@@ -125,9 +125,9 @@ function PlasmicFooter__RenderFunc(props) {
                 displayWidth={"220px"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/auxano/images/logoOrange2Xpng.png",
-                  fullWidth: 277,
-                  fullHeight: 119,
+                  src: "/plasmic/auxano/images/logoFinal2Xpng.png",
+                  fullWidth: 280,
+                  fullHeight: 125,
                   aspectRatio: undefined
                 }}
               />

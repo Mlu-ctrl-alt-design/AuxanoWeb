@@ -946,6 +946,11 @@
           "id": "9sSoSMzrZ",
           "name": "Logo Dark@2x.png",
           "filePath": "../public/plasmic/auxano/images/logoDark2Xpng.png"
+        },
+        {
+          "id": "YAKjFMsqF",
+          "name": "logo final@2x.png",
+          "filePath": "../public/plasmic/auxano/images/logoFinal2Xpng.png"
         }
       ],
       "indirect": false,
@@ -1029,6 +1034,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.291",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.291/dist/plasmic.schema.json"
+  "cliVersion": "0.1.292",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.292/dist/plasmic.schema.json"
 }
