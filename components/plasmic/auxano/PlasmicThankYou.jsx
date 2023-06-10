@@ -70,8 +70,8 @@ function PlasmicThankYou__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"thankYouPage"}
+          data-plasmic-override={overrides.thankYouPage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -81,7 +81,7 @@ function PlasmicThankYou__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.thankYouPage
           )}
         >
           <NavBarFinal
@@ -158,7 +158,7 @@ function PlasmicThankYou__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBarFinal", "columns", "img", "button2"],
+  thankYouPage: ["thankYouPage", "navBarFinal", "columns", "img", "button2"],
   navBarFinal: ["navBarFinal"],
   columns: ["columns", "img", "button2"],
   img: ["img"],
@@ -184,7 +184,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "thankYouPage") {
     func.displayName = "PlasmicThankYou";
   } else {
     func.displayName = `PlasmicThankYou.${nodeName}`;
@@ -194,7 +194,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicThankYou = Object.assign(
   // Top-level PlasmicThankYou renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("thankYouPage"),
   {
     // Helper components rendering sub-elements
     navBarFinal: makeNodeComponent("navBarFinal"),

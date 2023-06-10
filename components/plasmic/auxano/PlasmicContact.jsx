@@ -145,8 +145,8 @@ function PlasmicContact__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"contactpage"}
+          data-plasmic-override={overrides.contactpage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -156,7 +156,7 @@ function PlasmicContact__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.contactpage
           )}
         >
           <section
@@ -1059,8 +1059,8 @@ function PlasmicContact__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  contactpage: [
+    "contactpage",
     "header",
     "navBarFinal",
     "frame26",
@@ -1270,7 +1270,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "contactpage") {
     func.displayName = "PlasmicContact";
   } else {
     func.displayName = `PlasmicContact.${nodeName}`;
@@ -1280,7 +1280,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicContact = Object.assign(
   // Top-level PlasmicContact renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("contactpage"),
   {
     // Helper components rendering sub-elements
     header: makeNodeComponent("header"),

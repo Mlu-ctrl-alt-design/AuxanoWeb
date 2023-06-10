@@ -125,8 +125,8 @@ function PlasmicFormsubmissions__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"formsubmissionspage"}
+          data-plasmic-override={overrides.formsubmissionspage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -136,7 +136,7 @@ function PlasmicFormsubmissions__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.formsubmissionspage
           )}
         >
           <NavBarFinal
@@ -233,7 +233,7 @@ function PlasmicFormsubmissions__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBarFinal", "table"],
+  formsubmissionspage: ["formsubmissionspage", "navBarFinal", "table"],
   navBarFinal: ["navBarFinal"],
   table: ["table"]
 };
@@ -257,7 +257,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "formsubmissionspage") {
     func.displayName = "PlasmicFormsubmissions";
   } else {
     func.displayName = `PlasmicFormsubmissions.${nodeName}`;
@@ -267,7 +267,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicFormsubmissions = Object.assign(
   // Top-level PlasmicFormsubmissions renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("formsubmissionspage"),
   {
     // Helper components rendering sub-elements
     navBarFinal: makeNodeComponent("navBarFinal"),

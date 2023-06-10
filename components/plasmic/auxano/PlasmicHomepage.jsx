@@ -108,8 +108,8 @@ function PlasmicHomepage__RenderFunc(props) {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"homepage"}
+          data-plasmic-override={overrides.homepage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -119,7 +119,7 @@ function PlasmicHomepage__RenderFunc(props) {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            sty.root
+            sty.homepage
           )}
         >
           <NavBarFinal
@@ -1187,8 +1187,8 @@ function PlasmicHomepage__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  homepage: [
+    "homepage",
     "navBarFinal",
     "headersection",
     "visionSection",
@@ -1464,7 +1464,7 @@ function makeNodeComponent(nodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "homepage") {
     func.displayName = "PlasmicHomepage";
   } else {
     func.displayName = `PlasmicHomepage.${nodeName}`;
@@ -1474,7 +1474,7 @@ function makeNodeComponent(nodeName) {
 
 export const PlasmicHomepage = Object.assign(
   // Top-level PlasmicHomepage renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("homepage"),
   {
     // Helper components rendering sub-elements
     navBarFinal: makeNodeComponent("navBarFinal"),
